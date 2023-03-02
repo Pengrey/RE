@@ -216,6 +216,10 @@ PS C:\Users\rodri\Desktop\APKFolder>
 </manifest>
 ```
 
+## Cordova url probbing
+![[Pasted image 20230302151217.png]]
+
+
 # Automated Static Analysis
 ![[transferir.pdf]]
 
