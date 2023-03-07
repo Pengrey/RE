@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RE/Project_1/CTT/Static Analysis/Static Analysis.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6976c64970e6eaaa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "RE/Project_1/CTT/Static Analysis/Static Analysis.md",
+                "file": "RE/Project_1/CTT/Dynamic Analysis/Dynamic Analysis.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "RE/Project_1/CTT/Static Analysis/Static Analysis.md",
+                "file": "RE/Project_1/CTT/Dynamic Analysis/Dynamic Analysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "RE/Project_1/CTT/Static Analysis/Static Analysis.md",
+                "file": "RE/Project_1/CTT/Dynamic Analysis/Dynamic Analysis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "RE/Project_1/CTT/Static Analysis/Static Analysis.md"
+                "file": "RE/Project_1/CTT/Dynamic Analysis/Dynamic Analysis.md"
               }
             }
           }
@@ -159,16 +146,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6976c64970e6eaaa",
+  "active": "ec6c31740c9543c4",
   "lastOpenFiles": [
+    "RE/Project_1/CTT/Dynamic Analysis/Images/Pasted image 20230307152918.png",
+    "RE/Project_1/CTT/Static Analysis/Static Analysis.md",
+    "RE/Lab_1/Lab_1.md",
+    "RE/Project_1/CTT/Index.md",
     "RE/Project_1/CTT/Dynamic Analysis/Dynamic Analysis.md",
     "RE/Project_1/CTT/Dynamic Analysis/Images",
     "RE/Project_1/CTT/Dynamic Analysis/Images/Pasted image 20230302184911.png",
     "RE/Project_1/CTT/Dynamic Analysis/Images/Pasted image 20230302184803.png",
-    "RE/Project_1/CTT/Static Analysis/Static Analysis.md",
     "RE/Project_1/CTT/Static Analysis/Images/Pasted image 20230302151217.png",
     "RE/Project_1/CTT/Static Analysis/transferir.pdf",
-    "RE/Project_1/CTT/Index.md",
     "RE/Project_1/CTT/Static Analysis/Images/Pasted image 20230225163739.png",
     "RE/Project_1/CTT/Static Analysis/Images/Pasted image 20230225163524.png",
     "RE/Project_1/CTT/Static Analysis/Images/Pasted image 20230225162317.png",
@@ -181,7 +170,6 @@
     "RE/Lab_1/Images/Pasted image 20230221162742.png",
     "RE/Lab_1/Images/Pasted image 20230221162503.png",
     "RE/Project_1/CTT",
-    "RE/Lab_1/Lab_1.md",
     "RE/Lab_1/Images",
     "RE/Project_1",
     "RE/Lab_1"
