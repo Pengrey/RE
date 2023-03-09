@@ -1,0 +1,157 @@
+{
+  "main": {
+    "id": "6e8aacd1b73f4872",
+    "type": "split",
+    "children": [
+      {
+        "id": "0af123c67d5face8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4d105a0c13c50e63",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "581a99fb774b7c70",
+    "type": "split",
+    "children": [
+      {
+        "id": "12500a45c248410c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f8527eb3d556295c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "06e3e8a94ca0b27d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ff956a10de819663",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "4973b5384d46cd51",
+    "type": "split",
+    "children": [
+      {
+        "id": "4d66402645560dd9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "92e0938fea7eb83b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d2317606efc24adc",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "6b0ed6fcd4a3a291",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "450e78140d71451d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "4d105a0c13c50e63",
+  "lastOpenFiles": [
+    "Static Analysis/01_Manifest Analysis.md",
+    "Static Analysis/011_Launcher.md",
+    "Static Analysis/0122_CampaignTrackingReceiver.md",
+    "Static Analysis/Static Analysis.md",
+    "Static Analysis/Exported.md",
+    "Static Analysis/0121_BroadcastRecTokenExp.md",
+    "Static Analysis/013_Application.md",
+    "Dynamic Analysis/Dynamic Analysis.md",
+    "Dynamic Analysis/Images/Pasted image 20230302184911.png",
+    "Dynamic Analysis/Images/Pasted image 20230302184803.png",
+    "Dynamic Analysis/Images",
+    "Dynamic Analysis",
+    "Static Analysis/transferir.pdf"
+  ]
+}
