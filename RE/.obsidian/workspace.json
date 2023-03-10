@@ -11,12 +11,8 @@
             "id": "ec6c31740c9543c4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "RE/Project_1/CTT/Static Analysis/Exported.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "RE/Project_1/CTT/Static Analysis/Exported.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "RE/Project_1/CTT/Static Analysis/Exported.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "RE/Project_1/CTT/Static Analysis/Exported.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,8 +138,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ec6c31740c9543c4",
+  "active": "6433fb39c8959158",
   "lastOpenFiles": [
+    "RE/Project_1/CTT/Static Analysis/01_Manifest Analysis.md",
+    "RE/Project_1/CTT/Static Analysis/013_Application.md",
+    "RE/Project_1/CTT/Static Analysis/0122_CampaignTrackingReceiver.md",
+    "RE/Project_1/CTT/Static Analysis/0121_BroadcastRecTokenExp.md",
+    "RE/Project_1/CTT/Static Analysis/011_Launcher.md",
     "RE/Project_1/CTT/Static Analysis/Static Analysis.md",
     "RE/Project_1/CTT/Static Analysis/Exported.md",
     "RE/Project_1/CTT/Dynamic Analysis/Dynamic Analysis.md",
