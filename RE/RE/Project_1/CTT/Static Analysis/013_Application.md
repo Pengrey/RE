@@ -1,0 +1,1 @@
+This application subclass contains the `MainActivity` (Launcher) and the exported received explored in [[0122_CampaignTrackingReceiver]] but there seems to be nothing else here to explore as an entrypoint.

@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "0af123c67d5face8",
+        "id": "fe59f5aab0ecd8ae",
         "type": "tabs",
         "children": [
           {
-            "id": "4d105a0c13c50e63",
+            "id": "1c3d3be4fb156603",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Static Analysis/013_Application.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Static Analysis/013_Application.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Static Analysis/013_Application.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Static Analysis/013_Application.md"
+              }
             }
           }
         ]
@@ -138,15 +146,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4d105a0c13c50e63",
+  "active": "f8527eb3d556295c",
   "lastOpenFiles": [
-    "Static Analysis/01_Manifest Analysis.md",
     "Static Analysis/011_Launcher.md",
+    "Static Analysis/01_Manifest Analysis.md",
+    "Static Analysis/0121_BroadcastRecTokenExp.md",
+    "Static Analysis/013_Application.md",
     "Static Analysis/0122_CampaignTrackingReceiver.md",
     "Static Analysis/Static Analysis.md",
     "Static Analysis/Exported.md",
-    "Static Analysis/0121_BroadcastRecTokenExp.md",
-    "Static Analysis/013_Application.md",
     "Dynamic Analysis/Dynamic Analysis.md",
     "Dynamic Analysis/Images/Pasted image 20230302184911.png",
     "Dynamic Analysis/Images/Pasted image 20230302184803.png",
