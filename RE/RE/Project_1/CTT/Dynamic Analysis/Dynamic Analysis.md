@@ -11,7 +11,7 @@ PS adb shell settings put global http_proxy 192.168.0.16:8082
 1. generate cert on Burp
 2. Add cert through settings on VM
 
-## Result (SSL Pinning is being used?)
+## Result (SSL Pinning is being used)
 ![[Pasted image 20230302184911.png]]
 
 ## Patching the SSL certificate with the help of Frida and Objection
@@ -73,5 +73,7 @@ Cleaning up temp files...
 PS C:\Users\rodri\Desktop\APKFolder>
 ```
 
-### Patch result (it crashes :(((( )
+### Patch result
 ![[Pasted image 20230307152918.png]]
+
+## Manual patching the SSL certificate with the help of Frida
