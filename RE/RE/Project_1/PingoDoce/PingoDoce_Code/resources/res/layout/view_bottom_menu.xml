@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:theme="@style/App.BottomNavigation" android:tag="layout/view_bottom_menu_0" android:layout_width="match_parent" android:layout_height="50dp">
+    <com.google.android.material.bottomnavigation.BottomNavigationView android:layout_gravity="center_vertical" android:id="@+id/view_BottomNavigationView" android:tag="binding_1" android:background="?attr/colorPrimary" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="match_parent" android:layout_height="60dp" android:paddingVertical="4dp" app:itemIconSize="34dp" app:itemIconTint="@color/selector_for_bottom_menu_text" app:itemTextColor="@color/selector_for_bottom_menu_text" app:labelVisibilityMode="1" app:menu="@menu/menu_bottom_navigation" style="@style/Widget.MaterialComponents.BottomNavigationView"/>
+</FrameLayout>

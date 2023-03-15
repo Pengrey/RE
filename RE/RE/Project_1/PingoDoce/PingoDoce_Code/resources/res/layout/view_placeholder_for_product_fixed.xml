@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:tag="layout/view_placeholder_for_product_fixed_0" android:layout_width="220dp" android:layout_height="280dp" style="@style/App.WidgetStyle.PlaceHolder">
+    <com.google.android.material.card.MaterialCardView android:theme="@style/App.PlaceHolder" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="20dp" android:layout_marginBottom="20dp" android:layout_marginStart="10dp" android:layout_marginEnd="10dp" style="@style/App.WidgetStyle.CardView.PlaceHolder"/>
+</com.facebook.shimmer.ShimmerFrameLayout>

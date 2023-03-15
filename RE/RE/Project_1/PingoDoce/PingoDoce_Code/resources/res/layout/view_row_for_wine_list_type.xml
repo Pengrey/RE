@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/card_wine_type" android:tag="layout/view_row_for_wine_list_type_0" android:layout_width="match_parent" android:layout_height="wrap_content" android:backgroundTint="@color/white" app:cardElevation="4dp">
+    <com.google.android.material.checkbox.MaterialCheckBox android:theme="@style/App.WidgetStyle.SubTitle" android:id="@+id/type_check_box" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="10dp" style="@style/App.WidgetStyle.SubTitle"/>
+</com.google.android.material.card.MaterialCardView>

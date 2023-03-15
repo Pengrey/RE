@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/activity_take_away_order_list_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/view_toolbar"/>
+    <androidx.constraintlayout.widget.ConstraintLayout android:tag="binding_1" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.github.guilhe.views.PlaceHolderRecyclerView android:theme="@style/App.RecyclerView" android:id="@+id/orders_PlaceHolderRecyclerView" android:clipToPadding="false" android:layout_width="0dp" android:layout_height="0dp" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <include android:layout_width="0dp" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" app:layout_constraintVertical_bias="0.4" layout="@layout/view_for_empty"/>
+        <include android:layout_width="@dimen/small_loading_width" android:layout_height="@dimen/small_loading_height" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" layout="@layout/view_loading_small"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,159 @@
+{
+  "main": {
+    "id": "45bf3e8175c9ed5c",
+    "type": "split",
+    "children": [
+      {
+        "id": "870a39c9219eec27",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a9ecec05a57b990f",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d516c5c9c54dceed",
+    "type": "split",
+    "children": [
+      {
+        "id": "951977ef08c98f1c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2c2b158f6f7949b4",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f368e308a490229c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "92a1cc0d9c9fb74d",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "right": {
+    "id": "01a6cf8929e0791f",
+    "type": "split",
+    "children": [
+      {
+        "id": "00835adf4bb4632c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4f307ff608943e3f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "90bf2d4f4413889b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "6bd45596252fd41f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "7b9c2bfb530dc659",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "a9ecec05a57b990f",
+  "lastOpenFiles": [
+    "01_Manifest Analysis.md",
+    "011_Launcher.md",
+    "0111_Launcher_StartActivity_E-GOI_PUSH.md",
+    "PingoDoce_Docs/Static Analysis",
+    "PingoDoce_Docs/Pasted image 20230315180117.png",
+    "PingoDoce_Docs/Dynamic Analysis",
+    "PingoDoce_Docs/01_Manifest Analysis.md",
+    "PingoDoce_Docs/011_Launcher.md",
+    "PingoDoce_Docs/0111_Launcher_StartActivity_E-GOI_PUSH.md",
+    "PingoDoce_Docs",
+    "Pasted image 20230315180117.png",
+    "Untitled",
+    "Static Analysis",
+    "Dynamic Analysis"
+  ]
+}

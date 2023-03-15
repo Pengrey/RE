@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/activity_banner_detail_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout android:tag="binding_1" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.core.widget.NestedScrollView android:id="@+id/content_NestedScrollView" android:layout_width="match_parent" android:layout_height="wrap_content" android:fillViewport="true" app:layout_behavior="@string/appbar_scrolling_view_behavior" app:layout_constraintTop_toTopOf="0">
+            <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/bottom_padding_for_lists_below_button" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent">
+                <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView android:layout_gravity="center" android:id="@+id/banner_image_ImageView" android:tag="binding_2" android:layout_width="match_parent" android:layout_height="144dp" android:scaleType="centerCrop" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+                    <ImageButton android:id="@+id/close_ImageButton" android:background="@android:color/transparent" android:layout_width="24dp" android:layout_height="24dp" android:layout_marginTop="8dp" android:foreground="?attr/selectableItemBackgroundBorderless" android:src="@drawable/ic_close_with_background" android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView android:theme="@style/App.Chip" android:id="@+id/const_banner_is_new" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/lbl_new" android:textAllCaps="true" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/banner_image_ImageView" style="@style/App.WidgetStyle.Chip"/>
+                <TextView android:id="@+id/const_banner_title" android:tag="binding_4" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" style="@style/App.WidgetStyle.Title"/>
+                <TextView android:id="@+id/const_banner_description" android:tag="binding_5" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_default" style="@style/App.WidgetStyle.SubTitle"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <com.google.android.material.button.MaterialButton android:theme="@style/App.Button" android:layout_gravity="bottom" android:tag="binding_6" android:layout_width="match_parent" app:layout_constraintBottom_toBottomOf="0" style="@style/App.WidgetStyle.Button"/>
+        <include android:layout_width="0dp" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" layout="@layout/view_loading"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

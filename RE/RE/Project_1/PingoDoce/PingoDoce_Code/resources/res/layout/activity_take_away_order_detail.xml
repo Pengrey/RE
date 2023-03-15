@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/activity_take_away_order_detail_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/view_toolbar"/>
+    <androidx.constraintlayout.widget.ConstraintLayout android:theme="@style/App.TakeAway.Checkout" android:background="?android:attr/windowBackground" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.recyclerview.widget.RecyclerView android:theme="@style/App.RecyclerView" android:id="@+id/order_RecyclerView" android:paddingTop="@dimen/spacing_default" android:paddingBottom="100dp" android:clipToPadding="false" android:layout_width="0dp" android:layout_height="match_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <com.google.android.material.button.MaterialButton android:theme="@style/App.Button.Secondary" android:id="@+id/ok_MaterialButton" android:tag="binding_1" android:layout_marginBottom="25dp" android:text="@string/btn_take_away_cancel" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" style="@style/App.WidgetStyle.OutlinedButton"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

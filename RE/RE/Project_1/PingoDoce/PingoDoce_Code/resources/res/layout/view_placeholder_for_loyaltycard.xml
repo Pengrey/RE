@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:theme="@style/App.PlaceHolder" android:tag="layout/view_placeholder_for_loyaltycard_0" android:background="?attr/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.facebook.shimmer.ShimmerFrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" app:shimmer_base_alpha="0.3" style="@style/App.WidgetStyle.PlaceHolder">
+        <com.google.android.material.card.MaterialCardView android:theme="@style/App.PlaceHolder" android:layout_gravity="start|center_vertical" android:layout_width="match_parent" android:layout_height="30dp" style="@style/App.WidgetStyle.CardView.PlaceHolder"/>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</FrameLayout>

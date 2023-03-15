@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/activity_shared_with_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/view_toolbar"/>
+    <com.github.guilhe.views.PlaceHolderRecyclerView android:theme="@style/App.RecyclerView" android:id="@+id/shared_PlaceHolderRecyclerView" android:paddingTop="@dimen/spacing_default" android:paddingBottom="@dimen/bottom_padding_for_lists_below_button" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+    <com.google.android.material.button.MaterialButton android:theme="@style/App.Button" android:layout_gravity="bottom" android:tag="binding_1" android:layout_width="match_parent" android:text="@string/btn_confirm" style="@style/App.WidgetStyle.Button"/>
+    <include android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/view_for_no_connection"/>
+    <include layout="@layout/view_loading"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

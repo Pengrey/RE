@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout-land/activity_loyalty_card_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.Guideline android:orientation="horizontal" android:id="@+id/const_guideline" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.8"/>
+        <com.google.android.material.card.MaterialCardView android:id="@+id/cardView" android:layout_width="0dp" android:layout_height="0dp" android:foregroundGravity="center" android:textAlignment="center" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" app:cardCornerRadius="15dp" app:cardElevation="20dp" app:cardPreventCornerOverlap="true" app:layout_constraintBottom_toBottomOf="@+id/const_guideline" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+            <FrameLayout android:id="@+id/card_container" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginStart="@dimen/spacing_default" android:layout_marginEnd="@dimen/spacing_default" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+                <include android:id="@+id/loyalty_card_Include" android:layout_width="match_parent" android:layout_height="match_parent" layout="@layout/view_real_card_loyalty"/>
+                <include android:id="@+id/ompd_card_Include" android:layout_width="match_parent" android:layout_height="match_parent" layout="@layout/view_real_card_ompd"/>
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View android:background="?android:attr/statusBarColor" android:layout_width="match_parent" android:layout_height="10dp" android:elevation="10dp"/>
+</FrameLayout>

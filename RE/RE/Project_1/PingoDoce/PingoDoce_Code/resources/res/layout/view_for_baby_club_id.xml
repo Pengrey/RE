@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/view_for_baby_club_id_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true" app:layout_constraintTop_toTopOf="0">
+        <TextView android:id="@+id/const_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/lbl_clubs_baby_insert_id_number" style="@style/App.WidgetStyle.Title"/>
+        <TextView android:id="@+id/const_desc" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/lbl_clubs_baby_insert_id_number_desc" style="@style/App.WidgetStyle.SubTitle"/>
+        <com.google.android.material.textfield.TextInputLayout android:theme="@style/App.TextInputLayout" android:id="@+id/const_title_TextInputLayout" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" app:endIconMode="2" app:errorTextAppearance="@style/TextAppearance.TextInputLayout.Error" style="@style/App.TextInputLayoutStyle">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/firstname_EditText" android:tag="binding_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textNoSuggestions|numberDecimal" style="@style/App.EditTextStyle"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <RadioGroup android:orientation="vertical" android:id="@+id/idTypeRadioGroup" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16dp" android:paddingEnd="0dp">
+            <RadioButton android:textSize="12sp" android:id="@+id/const_id_type_radioButton_card" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lbl_clubs_baby_id_card"/>
+            <RadioButton android:textSize="12sp" android:id="@+id/const_id_type_radioButton_birth_certificate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lbl_clubs_baby_id_birth"/>
+        </RadioGroup>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

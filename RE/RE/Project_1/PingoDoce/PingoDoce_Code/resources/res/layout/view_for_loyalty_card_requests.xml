@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/view_for_loyalty_card_requests_0" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:theme="@style/App.Info" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/lbl_loyalty_card_pending_requests" android:layout_marginStart="@dimen/spacing_default" android:layout_marginEnd="@dimen/spacing_default" style="@style/App.WidgetStyle.Info"/>
+    <com.google.android.material.button.MaterialButton android:theme="@style/App.Button.Secondary.Variant" android:layout_gravity="center" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="50dp" android:layout_marginTop="10dp" android:layout_marginBottom="0dp" android:text="@string/btn_loyalty_request" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" style="@style/App.WidgetStyle.OutlinedButton"/>
+</LinearLayout>

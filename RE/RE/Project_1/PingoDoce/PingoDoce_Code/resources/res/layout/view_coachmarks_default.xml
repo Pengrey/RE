@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/view_coachmarks_default_0" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/gradient_bg_black_transparent" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0">
+        <TextView android:theme="@style/App.CoachMark" android:textColor="?android:attr/textColorPrimary" android:gravity="center" android:id="@+id/coachmark_TextView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="20dp"/>
+        <com.google.android.material.button.MaterialButton android:theme="@style/App.Button" android:id="@+id/coachmark_MaterialButton" android:layout_width="match_parent" android:text="@string/btn_next" style="@style/App.WidgetStyle.Button"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

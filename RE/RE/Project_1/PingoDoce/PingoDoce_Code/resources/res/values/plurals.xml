@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lbl_active_benefits_amount">
+        <item quantity="one">%s benefício ativo</item>
+        <item quantity="other">%s benefícios ativos</item>
+    </plurals>
+    <plurals name="lbl_product_added_plurals">
+        <item quantity="one">Produto adicionado</item>
+        <item quantity="other">%s produtos adicionados</item>
+    </plurals>
+    <plurals name="lbl_products_total_plurals">
+        <item quantity="one">%s Produto</item>
+        <item quantity="other">%s Produtos</item>
+    </plurals>
+    <plurals name="lbl_shopping_checked_item_count_plurals">
+        <item quantity="one">%s artigo riscado</item>
+        <item quantity="other">%s artigos riscados</item>
+    </plurals>
+    <plurals name="lbl_shopping_list_item_count_plurals">
+        <item quantity="one">%s artigo</item>
+        <item quantity="other">%s artigos</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d new notification</item>
+        <item quantity="other">%d new notifications</item>
+    </plurals>
+</resources>

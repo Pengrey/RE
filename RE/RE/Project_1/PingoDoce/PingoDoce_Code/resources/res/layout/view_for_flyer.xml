@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/view_for_flyer_0" android:layout_width="wrap_content" android:layout_height="380dp" android:layout_marginEnd="8dp">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.google.android.material.card.MaterialCardView android:id="@+id/const_flyer_MaterialCardView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginEnd="8dp" app:cardCornerRadius="0dp" app:cardElevation="5dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" style="@style/Widget.MaterialComponents.CardView">
+            <ImageView android:id="@+id/const_flyer_image" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="305dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+        </com.google.android.material.card.MaterialCardView>
+        <TextView android:gravity="center" android:id="@+id/flyer_title_TextView" android:tag="binding_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="25dp" android:layout_marginStart="0dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/const_flyer_MaterialCardView" style="@style/App.WidgetStyle.Title"/>
+        <TextView android:gravity="center" android:id="@+id/flyer_description_TextView" android:tag="binding_3" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="0dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/flyer_title_TextView" style="@style/App.WidgetStyle.SubTitle"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

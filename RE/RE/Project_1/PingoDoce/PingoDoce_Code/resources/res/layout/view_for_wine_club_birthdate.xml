@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/view_for_wine_club_birthdate_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true" app:layout_constraintTop_toTopOf="0">
+        <TextView android:id="@+id/const_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/lbl_club_wine_insert_age_title" style="@style/App.WidgetStyle.Title"/>
+        <TextView android:id="@+id/const_subtitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="16dp" android:layout_marginRight="16dp" android:text="@string/lbl_club_wine_insert_age_subtitle" android:layout_marginHorizontal="16dp" style="@style/App.WidgetStyle.SubTitle"/>
+        <com.google.android.material.textfield.TextInputLayout android:theme="@style/App.TextInputLayout" android:id="@+id/const_title_TextInputLayout" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" app:errorTextAppearance="@style/TextAppearance.TextInputLayout.Error" style="@style/App.TextInputLayoutStyle">
+            <TextView android:id="@+id/birthdate_EditText" android:tag="binding_2" android:layout_width="match_parent" android:layout_height="match_parent" android:hint="@string/hint_date" style="@style/App.EditTextStyle"/>
+            <View android:id="@+id/const_bottom_separator" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="@+id/birthdate_EditText" app:layout_constraintStart_toStartOf="@+id/birthdate_EditText" style="@style/App.WidgetStyle.HorizontalSep"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

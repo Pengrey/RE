@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:tag="layout/bottomsheet_for_benefits_detail_info_0" android:paddingBottom="30dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="29dp" android:text="@string/lbl_loyalty_card_help" android:fontFamily="@font/open_sans_bold" style="@style/App.WidgetStyle.BottomSheet.Title"/>
+    <View android:layout_width="match_parent" android:layout_marginTop="5dp" style="@style/App.WidgetStyle.HorizontalSep"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/lbl_active_benefits" android:fontFamily="@font/open_sans_bold" style="@style/App.WidgetStyle.SubTitle"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/lbl_active_benefits_desc" style="@style/App.WidgetStyle.SubTitle"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:text="@string/lbl_active_balance" android:fontFamily="@font/open_sans_bold" style="@style/App.WidgetStyle.SubTitle"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/lbl_active_balance_desc" style="@style/App.WidgetStyle.SubTitle"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/lbl_fuel_benefit" android:fontFamily="@font/open_sans_bold" style="@style/App.WidgetStyle.SubTitle"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/lbl_fuel_benefit_desc" style="@style/App.WidgetStyle.SubTitle"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:text="@string/lbl_fuel_pts" android:fontFamily="@font/open_sans_bold" style="@style/App.WidgetStyle.SubTitle"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/lbl_fuel_pts_desc" style="@style/App.WidgetStyle.SubTitle"/>
+</LinearLayout>
