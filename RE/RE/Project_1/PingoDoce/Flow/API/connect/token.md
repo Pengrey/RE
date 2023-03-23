@@ -1,0 +1,31 @@
+Request:
+```json
+POST /connect/token HTTP/1.1
+Host: app-proxy.pingodoce.pt
+Authorization: Bearer eyJhbGciOiJSUzUxMiIsInR5cCI6ImF0K2p3dCJ9.eyJuYmYiOjE2Nzk1OTE3MDAsImV4cCI6MTY3OTU5NTMwMCwiaXNzIjoiaHR0cHM6Ly9hcHAtcHJveHkucGluZ29kb2NlLnB0LyIsImF1ZCI6InBkYXBwIiwiY2xpZW50X2lkIjoiUERBcHBDbGllbnQiLCJzdWIiOiJkN2YwMjliMi03NWZiLTQxMjItZmU0Yi0wOGRiMmI2ZDI0MTkiLCJhdXRoX3RpbWUiOjE2Nzk1OTE3MDAsImlkcCI6ImxvY2FsIiwic2NvcGUiOlsicGRhcHAuYW5vbnltb3VzX2FjY2VzcyIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwd2QiXX0.bcAX9ZYE_gfzb-rAb1O1x92N6qUhW6RQUNMPzO_qfCOFlOc4g0m3-uJGgyGIP5DBjxO175F_tU1nKj6U62fPf-yqxVaoG7m7JMpErMApLlf8m97HwGQop9E8SpJV5mfE-jonrpQhl-Vljr4jUFMngLUlPsnYpNSnXk23Yu3uvrcx2Lxl9A01ZJzYhQ668YTdbuBla5sx4qhyLymLqtskKE5NiMI2GuDnyusxTzVq7RKkW1VbTfmGQ5rFJ-VZkaaFQMBGMKslNGiJIXLJH-YC9iwIzOOhltwYJnSwC_mg0TAp0CFFysZy4VHBEXcx4I_ooGtXT9SlHNHFZkXay9dNQQ
+Accept-Language: en-US
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 104
+Accept-Encoding: gzip, deflate
+User-Agent: okhttp/4.10.0
+Connection: close
+
+client_id=pdappclient&grant_type=refresh_token&refresh_token=psux4jZh4Yhm0N7SnNhPSWaVSHc3-esvt7nP4TluXig
+```
+
+Response:
+```json
+HTTP/1.1 200 OK
+Connection: close
+Content-Type: application/json; charset=utf-8
+Date: Thu, 23 Mar 2023 18:10:36 GMT
+Cache-Control: no-store, no-cache, max-age=0
+Pragma: no-cache
+Vary: Accept-Encoding
+Request-Context: appId=cid-v1:b18b1f5c-1067-4634-a8b5-28282182ef3d
+Strict-Transport-Security: max-age=2592000; preload
+X-Powered-By: ASP.NET
+Content-Length: 904
+
+{"access_token":"eyJhbGciOiJSUzUxMiIsInR5cCI6ImF0K2p3dCJ9.eyJuYmYiOjE2Nzk1OTUwMzcsImV4cCI6MTY3OTU5ODYzNywiaXNzIjoiaHR0cHM6Ly9hcHAtcHJveHkucGluZ29kb2NlLnB0LyIsImF1ZCI6InBkYXBwIiwiY2xpZW50X2lkIjoiUERBcHBDbGllbnQiLCJzdWIiOiJkN2YwMjliMi03NWZiLTQxMjItZmU0Yi0wOGRiMmI2ZDI0MTkiLCJhdXRoX3RpbWUiOjE2Nzk1OTE3MDAsImlkcCI6ImxvY2FsIiwic2NvcGUiOlsicGRhcHAuYW5vbnltb3VzX2FjY2VzcyIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwd2QiXX0.X3XWYOkUZUumBH55erG-an3DICSlvm0eNjWzm74OzAyyDqnBXCp0UvIpN3vUwuIUELonR8-0Ogypfdh3DZwaDgiyG_mr3Ib80spWouz2FuAssxI4T7gU9JXi5GPDT4Oesr2i1swk_Dwgn5nqAK1k7Aeo-48EbhUTx0rKe1jqalCQVaiQk7oFxCpQQ9rCySPs0uo3CbN_XgQwLKc1BeVb_rrpEStm8H20IbNZF7-ONKmoaXlSZq_zV3GRQKMN7NX_nN9I_p64fOFydbK9V1bg8rawithDAjTOpr-BSaKhFMjGs94AGHYvixgZpvrBmg76d8OuHK9d6GjfdhhUgTFZQg","expires_in":3600,"token_type":"Bearer","refresh_token":"vlWAmM4ySCPSD0qW1B2UCmzrq75yAAiEft_qiPJ-29E","scope":"pdapp.anonymous_access offline_access"}
+```
