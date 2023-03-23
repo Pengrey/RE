@@ -1,19 +1,19 @@
 {
   "main": {
-    "id": "6e8aacd1b73f4872",
+    "id": "c836383db134cb67",
     "type": "split",
     "children": [
       {
-        "id": "fe59f5aab0ecd8ae",
+        "id": "defa0770afc9c0cb",
         "type": "tabs",
         "children": [
           {
-            "id": "1c3d3be4fb156603",
+            "id": "e096ab83c12c95ef",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Static Analysis/011_Launcher.md",
+                "file": "PingoDoce_Docs/Static Analysis/01_Manifest Analysis.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "581a99fb774b7c70",
+    "id": "b30795695c69688f",
     "type": "split",
     "children": [
       {
-        "id": "12500a45c248410c",
+        "id": "b2d4ee54349f88ae",
         "type": "tabs",
         "children": [
           {
-            "id": "f8527eb3d556295c",
+            "id": "c7fe260c24ea5aa7",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,7 +43,7 @@
             }
           },
           {
-            "id": "06e3e8a94ca0b27d",
+            "id": "14d5500a9d7064cb",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -58,7 +58,7 @@
             }
           },
           {
-            "id": "ff956a10de819663",
+            "id": "c74d88adb06e85c4",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -69,23 +69,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300
   },
   "right": {
-    "id": "4973b5384d46cd51",
+    "id": "0a77a7fd8de7dd9c",
     "type": "split",
     "children": [
       {
-        "id": "4d66402645560dd9",
+        "id": "94cfbb21b79dfb8f",
         "type": "tabs",
         "children": [
           {
-            "id": "92e0938fea7eb83b",
+            "id": "823fd417fd6b3d27",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Static Analysis/011_Launcher.md",
+                "file": "PingoDoce_Docs/Static Analysis/01_Manifest Analysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,19 +97,19 @@
             }
           },
           {
-            "id": "d2317606efc24adc",
+            "id": "a547f1f996455f88",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Static Analysis/011_Launcher.md",
+                "file": "PingoDoce_Docs/Static Analysis/01_Manifest Analysis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "6b0ed6fcd4a3a291",
+            "id": "fd245205aca05e49",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -120,12 +120,12 @@
             }
           },
           {
-            "id": "450e78140d71451d",
+            "id": "2d574c8ed3c1a507",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Static Analysis/011_Launcher.md"
+                "file": "PingoDoce_Docs/Static Analysis/01_Manifest Analysis.md"
               }
             }
           }
@@ -146,22 +146,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1c3d3be4fb156603",
+  "active": "c7fe260c24ea5aa7",
   "lastOpenFiles": [
-    "Dynamic Analysis/Images/Pasted image 20230314161630.png",
-    "Dynamic Analysis/Images/Pasted image 20230314154040.png",
-    "Static Analysis/013_Application.md",
-    "Static Analysis/011_Launcher.md",
-    "Static Analysis/01_Manifest Analysis.md",
-    "Static Analysis/0121_BroadcastRecTokenExp.md",
-    "Static Analysis/0122_CampaignTrackingReceiver.md",
-    "Static Analysis/Static Analysis.md",
-    "Static Analysis/Exported.md",
-    "Dynamic Analysis/Dynamic Analysis.md",
-    "Dynamic Analysis/Images/Pasted image 20230302184911.png",
-    "Dynamic Analysis/Images/Pasted image 20230302184803.png",
-    "Dynamic Analysis/Images",
-    "Dynamic Analysis",
-    "Static Analysis/transferir.pdf"
+    "PingoDoce_Docs/Static Analysis/011_Launcher.md",
+    "PingoDoce_Docs/Static Analysis/0111_Launcher_StartActivity_E-GOI_PUSH.md",
+    "PingoDoce_Docs/Static Analysis/01_Manifest Analysis.md"
   ]
 }
