@@ -4,21 +4,45 @@
     "type": "split",
     "children": [
       {
-        "id": "5d2347bd0741103e",
+        "id": "8c071064d8952cf1",
         "type": "tabs",
         "children": [
           {
-            "id": "39a7053e1ae2c724",
+            "id": "a0a68e4eda98d54c",
             "type": "leaf",
             "state": {
               "type": "canvas",
               "state": {
                 "file": "RE/Project_1/PingoDoce/Flow/App_Flow.canvas",
                 "viewState": {
-                  "x": 1048.6980581375185,
-                  "y": 5096.594816463135,
-                  "zoom": -3.666666666666667
+                  "x": -393.74840168587684,
+                  "y": 6071.843235825261,
+                  "zoom": -1.666666666666666
                 }
+              }
+            }
+          },
+          {
+            "id": "691e50cb56641592",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "RE/Project_1/PingoDoce/Flow/API/user/transactionsHistory/transactionsHistory.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ba23d6dfb4e7fe39",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "RE/Project_1/PingoDoce/Flow/API/user/transactionsHistory/chart.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -151,52 +175,52 @@
   },
   "active": "6433fb39c8959158",
   "lastOpenFiles": [
-    "RE/Project_1/PingoDoce/Flow/API/takeaway/orders/ERROR.md",
-    "RE/Project_1/PingoDoce/Flow/API/takeaway/orders/cancel.md",
+    "RE/Project_1/PingoDoce/Flow/API/user/transactionsHistory/transactionsHistory.md",
+    "RE/Project_1/PingoDoce/Flow/API/user/transactionsHistory/chart.md",
     "RE/Project_1/PingoDoce/Flow/App_Flow.canvas",
+    "RE/Project_1/PingoDoce/Flow/API/user/transactionsHistory",
+    "RE/Project_1/PingoDoce/Flow/Pages/Ja Poupei.md",
+    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324154326.png",
+    "RE/Project_1/PingoDoce/Flow/Pages/Confirm order.md",
+    "RE/Project_1/PingoDoce/Flow/Pages/Orders View.md",
+    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324153440.png",
+    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324153238.png",
+    "RE/Project_1/PingoDoce/Flow/Pages/Takeaway Categories.md",
+    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324153138.png",
+    "RE/Project_1/PingoDoce/Flow/Pages/Takeaway Page.md",
+    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324145028.png",
+    "RE/Project_1/PingoDoce/Flow/Pages/Shopping List StoreM.md",
+    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324144848.png",
+    "RE/Project_1/PingoDoce/Flow/Pages/Shopping list.md",
+    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324144230.png",
+    "RE/Project_1/PingoDoce/Flow/Pages/Promotions.md",
+    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324143827.png",
+    "RE/Project_1/PingoDoce/Flow/API/user/shoppinglists/activeList.md",
+    "RE/Project_1/PingoDoce/Flow/Pages/Main Tab.md",
+    "RE/Project_1/PingoDoce/Flow/Pages/Main Page.md",
+    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324142608.png",
+    "RE/Project_1/PingoDoce/Flow/Pages/Welcome Page.md",
+    "RE/Project_1/PingoDoce/Flow/Pages/Unlock Screen.md",
+    "RE/Project_1/PingoDoce/Flow/Pages/Landing Page.md",
+    "RE/Project_1/PingoDoce/Flow/Pages/Intro Page.md",
+    "RE/Project_1/PingoDoce/Flow/Pages/End Session.md",
+    "RE/Project_1/PingoDoce/Flow/API/identity/pinrecoverywebandsms/recoverpin.md",
+    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324141548.png",
+    "RE/Project_1/PingoDoce/Flow/API/identity/sms/verifyNumber.md",
+    "RE/Project_1/PingoDoce/Flow/API/identity/pinrecoverywebandsms",
+    "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/0111_Launcher_StartActivity_E-GOI_PUSH.md",
+    "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/011_Launcher.md",
+    "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/01_Manifest Analysis.md",
+    "RE/Project_1/CTT/Static Analysis/Static Analysis.md",
+    "RE/Project_1/CTT/Static Analysis/0122_CampaignTrackingReceiver.md",
+    "RE/Project_1/CTT/Static Analysis/0121_BroadcastRecTokenExp.md",
     "RE/Project_1/PingoDoce/Flow/API/takeaway/orders",
-    "RE/Project_1/PingoDoce/Flow/API/takeaway/categories/categories.md",
-    "RE/Project_1/PingoDoce/Flow/API/takeaway/categories/HighlightCode.md",
-    "RE/Project_1/PingoDoce/Flow/API/takeaway/orders/orders.md",
-    "RE/Project_1/PingoDoce/Flow/API/takeaway/categories/24DM.md",
     "RE/Project_1/PingoDoce/Flow/API/takeaway/categories",
-    "RE/Project_1/PingoDoce/Flow/API/catalog/search/tags.md",
-    "RE/Project_1/PingoDoce/Flow/API/takeaway/status.md",
-    "RE/Project_1/PingoDoce/Flow/API/takeaway/store/814.md",
     "RE/Project_1/PingoDoce/Flow/API/takeaway/store",
     "RE/Project_1/PingoDoce/Flow/API/takeaway",
-    "RE/Project_1/PingoDoce/Flow/API/catalog/search/categories.md",
-    "RE/Project_1/PingoDoce/Flow/API/user/shoppinglists/storemode.md",
-    "RE/Project_1/PingoDoce/Flow/API/user/userprofiles/store.md",
-    "RE/Project_1/PingoDoce/Flow/API/catalog/search/recommendations.md",
     "RE/Project_1/PingoDoce/Flow/API/catalog/search/Untitled",
-    "RE/Project_1/PingoDoce/Flow/API/user/cardassociations/status.md",
     "RE/Project_1/PingoDoce/Flow/API/user/cardassociations",
-    "RE/Project_1/PingoDoce/Flow/API/user/userprofiles/userprofiles.md",
     "RE/Project_1/PingoDoce/Flow/API/user/userprofiles",
-    "RE/Project_1/PingoDoce/Flow/API/user/shoppinglists/shoppinglists.md",
-    "RE/Project_1/PingoDoce/Flow/API/identity/onboarding/login.md",
-    "RE/Project_1/PingoDoce/Flow/API/user/banners.md",
-    "RE/Project_1/PingoDoce/Flow/API/identity/sms/verifyNumber.md",
-    "RE/Project_1/PingoDoce/Flow/API/identity/onboarding",
-    "RE/Project_1/PingoDoce/Flow/API/identity/sms/verifyNumber",
-    "RE/Project_1/PingoDoce/Flow/API/identity/sms",
-    "RE/Project_1/PingoDoce/Flow/API/connect/token.md",
-    "RE/Project_1/PingoDoce/Flow/API/catalog/search/flyers.md",
-    "RE/Project_1/PingoDoce/Flow/API/catalog/search/products.md",
-    "RE/Project_1/PingoDoce/Flow/API/user/clubs/codes.md",
-    "RE/Project_1/PingoDoce/Flow/API/user/shoppinglists/count.md",
-    "RE/Project_1/PingoDoce/Flow/Pages/Main Page.md",
-    "RE/Project_1/PingoDoce/Flow/Bypasses/SSL Pinning Bypass.md",
-    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230323175210.png",
-    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230323172425.png",
-    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230323172330.png",
-    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230323171404.png",
-    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230323162532.png",
-    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230323150549.png",
-    "RE/Project_1/PingoDoce/Flow/Images/IntroPage.gif",
-    "RE/Project_1/PingoDoce/PingoDoce_Docs/Pasted image 20230315180117.png",
-    "RE/Project_1/CTT/Dynamic Analysis/Images/Pasted image 20230314161630.png",
-    "RE/Project_1/CTT/Dynamic Analysis/Images/Pasted image 20230314154040.png"
+    "RE/Project_1/PingoDoce/Flow/API/identity/onboarding"
   ]
 }
