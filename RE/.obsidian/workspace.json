@@ -15,32 +15,20 @@
               "state": {
                 "file": "RE/Project_1/PingoDoce/Flow/App_Flow.canvas",
                 "viewState": {
-                  "x": -393.74840168587684,
-                  "y": 6071.843235825261,
-                  "zoom": -1.666666666666666
+                  "x": 1337.3827421193346,
+                  "y": 7348.193393128934,
+                  "zoom": -0.8939485413830539
                 }
               }
             }
           },
           {
-            "id": "691e50cb56641592",
+            "id": "6c5cc80309fc93d5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RE/Project_1/PingoDoce/Flow/API/user/transactionsHistory/transactionsHistory.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ba23d6dfb4e7fe39",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "RE/Project_1/PingoDoce/Flow/API/user/transactionsHistory/chart.md",
+                "file": "RE/Project_1/PingoDoce/Flow/email confirmation.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +84,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 301.5
+    "width": 301.5,
+    "collapsed": true
   },
   "right": {
     "id": "ae58d488882e654b",
@@ -173,11 +162,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6433fb39c8959158",
+  "active": "a0a68e4eda98d54c",
   "lastOpenFiles": [
+    "RE/Project_1/PingoDoce/Flow/email confirmation.md",
+    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324161950.png",
+    "RE/Project_1/PingoDoce/Flow/App_Flow.canvas",
     "RE/Project_1/PingoDoce/Flow/API/user/transactionsHistory/transactionsHistory.md",
     "RE/Project_1/PingoDoce/Flow/API/user/transactionsHistory/chart.md",
-    "RE/Project_1/PingoDoce/Flow/App_Flow.canvas",
     "RE/Project_1/PingoDoce/Flow/API/user/transactionsHistory",
     "RE/Project_1/PingoDoce/Flow/Pages/Ja Poupei.md",
     "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324154326.png",
@@ -205,15 +196,12 @@
     "RE/Project_1/PingoDoce/Flow/Pages/Intro Page.md",
     "RE/Project_1/PingoDoce/Flow/Pages/End Session.md",
     "RE/Project_1/PingoDoce/Flow/API/identity/pinrecoverywebandsms/recoverpin.md",
-    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324141548.png",
     "RE/Project_1/PingoDoce/Flow/API/identity/sms/verifyNumber.md",
     "RE/Project_1/PingoDoce/Flow/API/identity/pinrecoverywebandsms",
     "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/0111_Launcher_StartActivity_E-GOI_PUSH.md",
     "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/011_Launcher.md",
     "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/01_Manifest Analysis.md",
     "RE/Project_1/CTT/Static Analysis/Static Analysis.md",
-    "RE/Project_1/CTT/Static Analysis/0122_CampaignTrackingReceiver.md",
-    "RE/Project_1/CTT/Static Analysis/0121_BroadcastRecTokenExp.md",
     "RE/Project_1/PingoDoce/Flow/API/takeaway/orders",
     "RE/Project_1/PingoDoce/Flow/API/takeaway/categories",
     "RE/Project_1/PingoDoce/Flow/API/takeaway/store",
