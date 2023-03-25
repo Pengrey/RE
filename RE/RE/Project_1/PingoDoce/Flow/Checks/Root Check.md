@@ -2,7 +2,7 @@
 
 The root check is being made with the help of [RootBeer](https://github.com/scottyab/rootbeer)
 
-The check is being called on the class m:
+The check is being called on the class `ai.m`:
 ```java
     @Override // ai.n
     public void a() {
@@ -22,7 +22,7 @@ The check is being called on the class m:
     }
 ```
 
-The first check invokes the root beer check:
+The first check invokes the root beer check present on the class `nc.b`:
 ```java
 package nc;
 

@@ -15,9 +15,9 @@
               "state": {
                 "file": "RE/Project_1/PingoDoce/Flow/App_Flow.canvas",
                 "viewState": {
-                  "x": -203.6248792535199,
-                  "y": 10804.05598644174,
-                  "zoom": -1.4939058851192772
+                  "x": -830,
+                  "y": 6299.5,
+                  "zoom": -3.827239218452611
                 }
               }
             }
@@ -72,8 +72,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 301.5,
-    "collapsed": true
+    "width": 301.5
   },
   "right": {
     "id": "ae58d488882e654b",
@@ -150,16 +149,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a0a68e4eda98d54c",
+  "active": "6433fb39c8959158",
   "lastOpenFiles": [
-    "RE/Project_1/PingoDoce/Flow/Bypasses/All Bypasses.md",
+    "RE/Project_1/PingoDoce/Flow/Checks/VM Check.md",
+    "RE/Project_1/PingoDoce/Flow/Checks/SSL Pinning.md",
+    "RE/Project_1/PingoDoce/Flow/Checks/Root Check.md",
+    "RE/Project_1/PingoDoce/Flow/App_Flow.canvas",
+    "RE/Project_1/PingoDoce/Flow/Bypasses/VM Check Bypass.md",
+    "RE/Project_1/PingoDoce/Flow/Bypasses/SSL Pinning Bypass.md",
     "RE/Project_1/PingoDoce/Flow/Bypasses/script.md",
     "RE/Project_1/PingoDoce/Flow/Bypasses/Root Check Bypass.md",
-    "RE/Project_1/PingoDoce/Flow/App_Flow.canvas",
+    "RE/Project_1/PingoDoce/Flow/Bypasses/All Bypasses.md",
+    "RE/Project_1/CTT/Dynamic Analysis/Dynamic Analysis.md",
     "RE/Project_1/PingoDoce/Flow/Bypasses/Script.md",
     "RE/Project_1/PingoDoce/Flow/Bypasses/bypass.js",
-    "RE/Project_1/PingoDoce/Flow/Bypasses/SSL Pinning Bypass.md",
-    "RE/Project_1/PingoDoce/Flow/Bypasses/VM Check Bypass.md",
     "RE/Project_1/PingoDoce/Flow/Bypasses/Untitled",
     "RE/Project_1/PingoDoce/Flow/API/connect/token.md",
     "RE/Project_1/PingoDoce/Flow/API/connect/revocation.md",
@@ -186,12 +189,7 @@
     "RE/Project_1/PingoDoce/Flow/Pages/Promotions.md",
     "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324143827.png",
     "RE/Project_1/PingoDoce/Flow/API/user/shoppinglists/activeList.md",
-    "RE/Project_1/PingoDoce/Flow/Pages/Main Tab.md",
-    "RE/Project_1/PingoDoce/Flow/Pages/Main Page.md",
     "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324142608.png",
-    "RE/Project_1/PingoDoce/Flow/Pages/Welcome Page.md",
-    "RE/Project_1/PingoDoce/Flow/Pages/Unlock Screen.md",
-    "RE/Project_1/PingoDoce/Flow/Pages/Landing Page.md",
     "RE/Project_1/PingoDoce/Flow/API/identity/pinrecoverywebandsms",
     "RE/Project_1/PingoDoce/Flow/API/takeaway/orders",
     "RE/Project_1/PingoDoce/Flow/API/takeaway/categories",
