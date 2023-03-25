@@ -13,7 +13,7 @@ android:screenOrientation="portrait">
     </intent-filter>  
 </activity>        
 ```
-[[01 - Launcher - SplashActivity]]
+[[Launcher - SplashActivity]]
 
 ## Broadcast Receivers (Exported)
 
