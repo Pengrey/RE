@@ -13,7 +13,7 @@ android:screenOrientation="portrait">
     </intent-filter>  
 </activity>        
 ```
-[[011_Launcher]]
+[[01 - Launcher]]
 
 ## Broadcast Receivers (Exported)
 
@@ -31,6 +31,7 @@ android:screenOrientation="portrait">
 </activity>
 ```
 
+[[02 - Exported OnboardingEmailSentActivity]]
 
 ```xml
 <activity android:name="pt.pingodoce.app.presentation.login.pin.change.RecoverPinActivity" android:exported="true" 
@@ -45,3 +46,4 @@ android:screenOrientation="portrait">
 </activity>
 ```
 
+[[03 - Exported RecoverPinActivity]]

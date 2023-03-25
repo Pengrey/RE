@@ -4,22 +4,38 @@
     "type": "split",
     "children": [
       {
-        "id": "defa0770afc9c0cb",
+        "id": "588f5b24da8cd54d",
         "type": "tabs",
         "children": [
           {
-            "id": "e096ab83c12c95ef",
+            "id": "2dcdfdb979288ca5",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Flow/App_Flow.canvas",
+                "viewState": {
+                  "x": 0.8711051011084885,
+                  "y": 6782.014135225507,
+                  "zoom": -1.5
+                }
+              }
+            }
+          },
+          {
+            "id": "7767f6e1e7b3f2c6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PingoDoce_Docs/Static Analysis/01_Manifest Analysis.md",
+                "file": "Flow/API/catalog/connect/token.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PingoDoce_Docs/Static Analysis/01_Manifest Analysis.md",
+                "file": "Flow/API/catalog/connect/token.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PingoDoce_Docs/Static Analysis/01_Manifest Analysis.md",
+                "file": "Flow/API/catalog/connect/token.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PingoDoce_Docs/Static Analysis/01_Manifest Analysis.md"
+                "file": "Flow/API/catalog/connect/token.md"
               }
             }
           }
@@ -146,10 +162,55 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c7fe260c24ea5aa7",
+  "active": "7767f6e1e7b3f2c6",
   "lastOpenFiles": [
-    "PingoDoce_Docs/Static Analysis/011_Launcher.md",
-    "PingoDoce_Docs/Static Analysis/0111_Launcher_StartActivity_E-GOI_PUSH.md",
-    "PingoDoce_Docs/Static Analysis/01_Manifest Analysis.md"
+    "Flow/API/connect/token.md",
+    "PingoDoce_Docs/Static Analysis/01 - Launcher.md",
+    "Flow/App_Flow.canvas",
+    "PingoDoce_Docs/Static Analysis/Untitled.canvas",
+    "Flow/Checks/Root Check.md",
+    "Pasted image 20230325110319.png",
+    "Pasted image 20230325110131.png",
+    "PingoDoce_Docs/Images/launcher_icon.png",
+    "PingoDoce_Docs/Images",
+    "PingoDoce_Docs/Images/Pasted image 20230325105911.png",
+    "PingoDoce_Docs/Static Analysis/02 - Exported OnboardingEmailSentActivity.md",
+    "Flow/Bypasses/script.md",
+    "Flow/Bypasses/bypass.js",
+    "Flow/Bypasses/All Bypasses.md",
+    "Flow/API/connect/revocation.md",
+    "Flow/API/connect",
+    "Flow/email confirmation.md",
+    "Flow/Images/Pasted image 20230324161950.png",
+    "Flow/API/catalog/connect/token.md",
+    "PingoDoce_Docs/Static Analysis/00 - Manifest Analysis.md",
+    "PingoDoce_Docs/Static Analysis/03 - Exported RecoverPinActivity.md",
+    "PingoDoce_Docs/Static Analysis/01.1 - Launcher_StartActivity_E-GOI_PUSH.md",
+    "Flow/Bypasses/VM Check Bypass.md",
+    "Flow/Checks/SSL Pinning.md",
+    "Flow/Checks/VM Check.md",
+    "Flow/API/catalog/search/recommendations.md",
+    "Flow/API/catalog/search/products.md",
+    "Flow/API/catalog/search/categories.md",
+    "Flow/API/catalog/search/flyers.md",
+    "Flow/API/identity/sms/verifyNumber.md",
+    "Flow/API/identity/onboarding/login.md",
+    "Flow/API/takeaway/store/814.md",
+    "Flow/API/takeaway/orders/orders.md",
+    "Flow/API/takeaway/orders/cancel.md",
+    "Flow/API/takeaway/orders/ERROR.md",
+    "Flow/API/takeaway/categories/categories.md",
+    "Flow/API/identity/sms",
+    "Flow/API/identity/onboarding",
+    "Flow/API/takeaway/store",
+    "Flow/API/takeaway/orders",
+    "Flow/API/takeaway/categories",
+    "Flow/API/user/userprofiles",
+    "Flow/API/user/shoppinglists",
+    "Flow/Images/Pasted image 20230323175210.png",
+    "Flow/Images/Pasted image 20230323172425.png",
+    "Flow/Images/Pasted image 20230323171404.png",
+    "Flow/Images/Pasted image 20230323162532.png",
+    "Flow/Images/Pasted image 20230323150549.png"
   ]
 }
