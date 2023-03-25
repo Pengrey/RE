@@ -1,0 +1,27 @@
+Request:
+```json
+POST /connect/revocation HTTP/1.1
+Host: app-proxy.pingodoce.pt
+Authorization: Bearer eyJhbGciOiJSUzUxMiIsInR5cCI6ImF0K2p3dCJ9.eyJuYmYiOjE2Nzk2NzE0OTksImV4cCI6MTY3OTY3NTA5OSwiaXNzIjoiaHR0cHM6Ly9hcHAtcHJveHkucGluZ29kb2NlLnB0LyIsImF1ZCI6InBkYXBwIiwiY2xpZW50X2lkIjoiUERBcHBDbGllbnQiLCJzdWIiOiIzZGZkNDcyOC01NmQ2LTQ3MjAtNGRmMS0wOGRiMjZiNWUyMmMiLCJhdXRoX3RpbWUiOjE2Nzk2Njc2NTQsImlkcCI6ImxvY2FsIiwic2NvcGUiOlsib3BlbmlkIiwicGRhcHAuYW5vbnltb3VzX2FjY2VzcyIsInBkYXBwLnNtc19hY2Nlc3MiLCJwZGFwcC5vbmJvYXJkaW5nX2FjY2VzcyIsInBkYXBwLmNoYW5nZV9udW1iZXIiLCJwZGFwcC5mdWxsX2FjY2VzcyIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwd2QiXX0.aWOnDblZZOHR2nBG4dUluuGxCLIa5Yj1pNirxiPgzWYVAKh1s3R4hFw159Z27J-FA4kMfnaA8v0HXsuO_o1CzbAPfZfi1BShhLc5vM0wBP8ekemO-bEyWCHO4U9O2UzZiVjlo_pF2UpQWt42GcRINi77nzwyJiwRjcjCTjrdRsbgQeaQMravj5IFRYz-KJvKkJF2XgJaTqkoPv3szd-dBdGQIop_0n4oEnpED5oC5LyubzW8zwvjz23MbLqw4heDJi77J_xaghKLfevYA1aZmXgAuoMI718oA2GzX9lBQY10CCycZbzf1O2h1zWedxyCQUfTzbz1q1QuQPr1jXhAdw
+Accept-Language: en-US
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 101
+Accept-Encoding: gzip, deflate
+User-Agent: okhttp/4.10.0
+Connection: close
+
+client_id=pdappclient&token=CYlrdF7a2y3bCHNkkuRV1e82aodIuVU2P7VLzlQT6_M&token_type_hint=refresh_token
+```
+
+Response:
+```json
+HTTP/1.1 200 OK
+Content-Length: 0
+Connection: close
+Date: Sat, 25 Mar 2023 07:06:43 GMT
+Request-Context: appId=cid-v1:b18b1f5c-1067-4634-a8b5-28282182ef3d
+Strict-Transport-Security: max-age=2592000; preload
+X-Powered-By: ASP.NET
+
+
+```

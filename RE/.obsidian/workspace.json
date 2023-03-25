@@ -15,22 +15,10 @@
               "state": {
                 "file": "RE/Project_1/PingoDoce/Flow/App_Flow.canvas",
                 "viewState": {
-                  "x": 1337.3827421193346,
-                  "y": 7348.193393128934,
-                  "zoom": -0.8939485413830539
+                  "x": -203.6248792535199,
+                  "y": 10804.05598644174,
+                  "zoom": -1.4939058851192772
                 }
-              }
-            }
-          },
-          {
-            "id": "6c5cc80309fc93d5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "RE/Project_1/PingoDoce/Flow/email confirmation.md",
-                "mode": "source",
-                "source": false
               }
             }
           }
@@ -164,9 +152,20 @@
   },
   "active": "a0a68e4eda98d54c",
   "lastOpenFiles": [
+    "RE/Project_1/PingoDoce/Flow/Bypasses/All Bypasses.md",
+    "RE/Project_1/PingoDoce/Flow/Bypasses/script.md",
+    "RE/Project_1/PingoDoce/Flow/Bypasses/Root Check Bypass.md",
+    "RE/Project_1/PingoDoce/Flow/App_Flow.canvas",
+    "RE/Project_1/PingoDoce/Flow/Bypasses/Script.md",
+    "RE/Project_1/PingoDoce/Flow/Bypasses/bypass.js",
+    "RE/Project_1/PingoDoce/Flow/Bypasses/SSL Pinning Bypass.md",
+    "RE/Project_1/PingoDoce/Flow/Bypasses/VM Check Bypass.md",
+    "RE/Project_1/PingoDoce/Flow/Bypasses/Untitled",
+    "RE/Project_1/PingoDoce/Flow/API/connect/token.md",
+    "RE/Project_1/PingoDoce/Flow/API/connect/revocation.md",
+    "RE/Project_1/PingoDoce/Flow/API/catalog/search/products.md",
     "RE/Project_1/PingoDoce/Flow/email confirmation.md",
     "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324161950.png",
-    "RE/Project_1/PingoDoce/Flow/App_Flow.canvas",
     "RE/Project_1/PingoDoce/Flow/API/user/transactionsHistory/transactionsHistory.md",
     "RE/Project_1/PingoDoce/Flow/API/user/transactionsHistory/chart.md",
     "RE/Project_1/PingoDoce/Flow/API/user/transactionsHistory",
@@ -193,22 +192,12 @@
     "RE/Project_1/PingoDoce/Flow/Pages/Welcome Page.md",
     "RE/Project_1/PingoDoce/Flow/Pages/Unlock Screen.md",
     "RE/Project_1/PingoDoce/Flow/Pages/Landing Page.md",
-    "RE/Project_1/PingoDoce/Flow/Pages/Intro Page.md",
-    "RE/Project_1/PingoDoce/Flow/Pages/End Session.md",
-    "RE/Project_1/PingoDoce/Flow/API/identity/pinrecoverywebandsms/recoverpin.md",
-    "RE/Project_1/PingoDoce/Flow/API/identity/sms/verifyNumber.md",
     "RE/Project_1/PingoDoce/Flow/API/identity/pinrecoverywebandsms",
-    "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/0111_Launcher_StartActivity_E-GOI_PUSH.md",
-    "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/011_Launcher.md",
-    "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/01_Manifest Analysis.md",
-    "RE/Project_1/CTT/Static Analysis/Static Analysis.md",
     "RE/Project_1/PingoDoce/Flow/API/takeaway/orders",
     "RE/Project_1/PingoDoce/Flow/API/takeaway/categories",
     "RE/Project_1/PingoDoce/Flow/API/takeaway/store",
     "RE/Project_1/PingoDoce/Flow/API/takeaway",
     "RE/Project_1/PingoDoce/Flow/API/catalog/search/Untitled",
-    "RE/Project_1/PingoDoce/Flow/API/user/cardassociations",
-    "RE/Project_1/PingoDoce/Flow/API/user/userprofiles",
-    "RE/Project_1/PingoDoce/Flow/API/identity/onboarding"
+    "RE/Project_1/PingoDoce/Flow/API/user/cardassociations"
   ]
 }
