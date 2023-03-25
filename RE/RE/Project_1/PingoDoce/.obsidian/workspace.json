@@ -4,38 +4,61 @@
     "type": "split",
     "children": [
       {
-        "id": "588f5b24da8cd54d",
+        "id": "f383d09d6ef8cf9d",
         "type": "tabs",
         "children": [
           {
-            "id": "2dcdfdb979288ca5",
+            "id": "e488d290a5714d53",
             "type": "leaf",
             "state": {
               "type": "canvas",
               "state": {
                 "file": "Flow/App_Flow.canvas",
                 "viewState": {
-                  "x": 0.8711051011084885,
-                  "y": 6782.014135225507,
-                  "zoom": -1.5
+                  "x": 925.643410922805,
+                  "y": 1292.7812407498498,
+                  "zoom": -1
                 }
               }
             }
           },
           {
-            "id": "7767f6e1e7b3f2c6",
+            "id": "5158bb2f58048cd4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Flow/API/catalog/connect/token.md",
+                "file": "PingoDoce_Docs/Static Analysis/01 - Launcher - SplashActivity.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a1c1bdd207e541d6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Flow/Pages/Intro Page.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8198dac1c03da743",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Flow/Pages/Main Page.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -101,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Flow/API/catalog/connect/token.md",
+                "file": "Flow/App_Flow.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +141,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Flow/API/catalog/connect/token.md",
+                "file": "Flow/App_Flow.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +164,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Flow/API/catalog/connect/token.md"
+                "file": "Flow/App_Flow.canvas"
               }
             }
           }
@@ -162,44 +185,44 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7767f6e1e7b3f2c6",
+  "active": "e488d290a5714d53",
   "lastOpenFiles": [
-    "Flow/API/connect/token.md",
-    "PingoDoce_Docs/Static Analysis/01 - Launcher.md",
+    "Flow/Pages/Main Page.md",
+    "Flow/Pages/Welcome Page.md",
     "Flow/App_Flow.canvas",
+    "PingoDoce_Docs/Static Analysis/01 - Launcher - SplashActivity.md",
+    "Flow/Pages/Intro Page.md",
     "PingoDoce_Docs/Static Analysis/Untitled.canvas",
+    "PingoDoce_Docs/Static Analysis/01.1 - Launcher_StartActivity_E-GOI_PUSH.md",
+    "Flow/Pages/Confirm order.md",
+    "Flow/Pages/End Session.md",
+    "PingoDoce_Docs/Static Analysis/02 - Exported OnboardingEmailSentActivity.md",
+    "Flow/Pages/Landing Page.md",
+    "Flow/Pages/Ja Poupei.md",
+    "Flow/email confirmation.md",
+    "PingoDoce_Docs/Static Analysis/Walkthrough Activity.md",
+    "PingoDoce_Docs/Static Analysis/00 - Manifest Analysis.md",
+    "Flow/API/catalog/connect/token.md",
+    "Flow/API/connect/token.md",
     "Flow/Checks/Root Check.md",
     "Pasted image 20230325110319.png",
     "Pasted image 20230325110131.png",
     "PingoDoce_Docs/Images/launcher_icon.png",
     "PingoDoce_Docs/Images",
     "PingoDoce_Docs/Images/Pasted image 20230325105911.png",
-    "PingoDoce_Docs/Static Analysis/02 - Exported OnboardingEmailSentActivity.md",
     "Flow/Bypasses/script.md",
     "Flow/Bypasses/bypass.js",
     "Flow/Bypasses/All Bypasses.md",
     "Flow/API/connect/revocation.md",
     "Flow/API/connect",
-    "Flow/email confirmation.md",
     "Flow/Images/Pasted image 20230324161950.png",
-    "Flow/API/catalog/connect/token.md",
-    "PingoDoce_Docs/Static Analysis/00 - Manifest Analysis.md",
     "PingoDoce_Docs/Static Analysis/03 - Exported RecoverPinActivity.md",
-    "PingoDoce_Docs/Static Analysis/01.1 - Launcher_StartActivity_E-GOI_PUSH.md",
     "Flow/Bypasses/VM Check Bypass.md",
     "Flow/Checks/SSL Pinning.md",
     "Flow/Checks/VM Check.md",
     "Flow/API/catalog/search/recommendations.md",
     "Flow/API/catalog/search/products.md",
     "Flow/API/catalog/search/categories.md",
-    "Flow/API/catalog/search/flyers.md",
-    "Flow/API/identity/sms/verifyNumber.md",
-    "Flow/API/identity/onboarding/login.md",
-    "Flow/API/takeaway/store/814.md",
-    "Flow/API/takeaway/orders/orders.md",
-    "Flow/API/takeaway/orders/cancel.md",
-    "Flow/API/takeaway/orders/ERROR.md",
-    "Flow/API/takeaway/categories/categories.md",
     "Flow/API/identity/sms",
     "Flow/API/identity/onboarding",
     "Flow/API/takeaway/store",

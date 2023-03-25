@@ -1,7 +1,7 @@
 {
 	"nodes":[
 		{"type":"file","file":"PingoDoce_Docs/Static Analysis/00 - Manifest Analysis.md","id":"171a8b8a0115da00","x":-460,"y":-320,"width":720,"height":600},
-		{"type":"file","file":"PingoDoce_Docs/Static Analysis/01 - Launcher.md","id":"074ce5c4c092ca9f","x":-300,"y":520,"width":400,"height":400},
+		{"type":"file","file":"PingoDoce_Docs/Static Analysis/01 - Launcher - SplashActivity.md","id":"074ce5c4c092ca9f","x":-300,"y":520,"width":400,"height":400},
 		{"type":"file","file":"PingoDoce_Docs/Static Analysis/03 - Exported RecoverPinActivity.md","id":"4cbf1c975a1d520c","x":-780,"y":520,"width":400,"height":400},
 		{"type":"file","file":"PingoDoce_Docs/Static Analysis/01.1 - Launcher_StartActivity_E-GOI_PUSH.md","id":"eb3e69baafbc56b3","x":-220,"y":1201,"width":400,"height":400},
 		{"id":"06c46e329f1979c6","x":260,"y":520,"width":400,"height":400,"type":"file","file":"PingoDoce_Docs/Static Analysis/02 - Exported OnboardingEmailSentActivity.md"}

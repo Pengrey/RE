@@ -69,7 +69,10 @@
 		{"type":"file","file":"RE/Project_1/PingoDoce/Flow/Bypasses/Root Check Bypass.md","id":"2a6b1a2a1e48b121","x":400,"y":448,"width":676,"height":500},
 		{"type":"file","file":"RE/Project_1/PingoDoce/Flow/Checks/VM Check.md","id":"5caa2aa0d662f5f7","x":538,"y":1021,"width":400,"height":666},
 		{"type":"file","file":"RE/Project_1/PingoDoce/Flow/Bypasses/SSL Pinning Bypass.md","id":"93109bb2bfe18a45","x":913,"y":4692,"width":835,"height":600},
-		{"type":"file","file":"RE/Project_1/PingoDoce/Flow/Bypasses/All Bypasses.md","id":"e7a2061c8cb22ace","x":-1616,"y":2363,"width":760,"height":727}
+		{"type":"file","file":"RE/Project_1/PingoDoce/Flow/Bypasses/All Bypasses.md","id":"e7a2061c8cb22ace","x":-1616,"y":2363,"width":760,"height":727},
+		{"type":"file","file":"RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/01 - Launcher - SplashActivity.md","id":"d97bcd835fa11622","x":2560,"y":1974,"width":1180,"height":1120},
+		{"type":"file","file":"RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/01.1 - Launcher_StartActivity_E-GOI_PUSH.md","id":"5b284d82589977c6","x":3920,"y":1520,"width":400,"height":400},
+		{"type":"file","file":"RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/Manifest Analysis.md","id":"4eb04e133da8b14b","x":2950,"y":880,"width":400,"height":400}
 	],
 	"edges":[
 		{"id":"54f13dc79e40886e","fromNode":"7cc22e63c9aedd4e","fromSide":"right","toNode":"2a6b1a2a1e48b121","toSide":"top"},
@@ -180,6 +183,13 @@
 		{"id":"7bcb5af2c0df2761","fromNode":"8d3f2145427a0d67","fromSide":"right","toNode":"48cd5bfcff3a45ae","toSide":"left"},
 		{"id":"5e46147aad2f2c87","fromNode":"7aa11501e61cf9c7","fromSide":"bottom","toNode":"ee7c5ab5c1023bc3","toSide":"right"},
 		{"id":"49a0521370c3ceee","fromNode":"7cc22e63c9aedd4e","fromSide":"left","toNode":"e7a2061c8cb22ace","toSide":"top"},
-		{"id":"0358931b965e3435","fromNode":"e7a2061c8cb22ace","fromSide":"bottom","toNode":"cbf7c6d15bf5666b","toSide":"top"}
+		{"id":"0358931b965e3435","fromNode":"e7a2061c8cb22ace","fromSide":"bottom","toNode":"cbf7c6d15bf5666b","toSide":"top"},
+		{"id":"f982b03bad2da176","fromNode":"d97bcd835fa11622","fromSide":"left","toNode":"cbf7c6d15bf5666b","toSide":"right"},
+		{"id":"2e71e30396ce336a","fromNode":"d97bcd835fa11622","fromSide":"left","toNode":"4eb8f731a3deb472","toSide":"right"},
+		{"id":"a411ee1557ffcdac","fromNode":"d97bcd835fa11622","fromSide":"left","toNode":"8958509c741240da","toSide":"right"},
+		{"id":"54eef72645549014","fromNode":"d97bcd835fa11622","fromSide":"left","toNode":"7cc22e63c9aedd4e","toSide":"right"},
+		{"id":"876282cd3e14c3e9","fromNode":"4eb04e133da8b14b","fromSide":"bottom","toNode":"d97bcd835fa11622","toSide":"top"},
+		{"id":"7fd1322499258425","fromNode":"4eb04e133da8b14b","fromSide":"right","toNode":"5b284d82589977c6","toSide":"top"},
+		{"id":"d5b4d67561ed462c","fromNode":"d97bcd835fa11622","fromSide":"right","toNode":"5b284d82589977c6","toSide":"bottom"}
 	]
 }

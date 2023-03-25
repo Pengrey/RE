@@ -16,12 +16,13 @@ android:screenOrientation="portrait">
 
 As this activity has set an intent-filter for `LAUNCHER`, this is the activity that is ran when a user opens the application via its homescreen icon.
 ![[launcher_icon.png]]
-
+### Flow
 On launch, the following pop up is shown, due to it being ran inside an emulator:
 ![[Pasted image 20230325110319.png]]
-This is further explored in [[Root Check]].
+This is explored in [[Root Check]].
 
-By clicking 'ok', the user is then shown a promotional screen showcasing the app's funcitonalities. Searching for the text present in Jadx, it is possible to find the string that contains the text in the screen, and find out where it is used, therefore finding which activity is currently on screen.
+By clicking 'ok', the user is then shown a promotional screen showcasing the app's funcitonalities: [[Intro Page]]. 
+Searching for the text present in it in Jadx, it is possible to find the string that contains the text in the screen, and find out where it is used, therefore finding which activity is currently on screen.
 
 This is present in `res/values/strings.xml`:
 `<string name="lbl_walkthrough_step1">Os meus folhetos</string>`
@@ -35,10 +36,17 @@ if (Intrinsics.equals(c13182l.m1459d(), Boolean.TRUE)) {
 }
 ```
 
-Upon renaming, we get the following snippet:
+After some digging around the code and renaming, we get the following snippet:
 
+``` java
+if (Intrinsics.equals(c13801l.getPossibleFirstLaunchBool(), Boolean.TRUE)) {  
+AppWalkThroughActivity.launchAppWalkThroughActivityIfNotNull(SplashActivity.this);
+}
+```
 
+This verifies if a certain boolean has value True and launches the [[Walkthrough Activity]].
 
+After this walkthrough (either skipped or completed) the user is greeted with a login page.
 
 ### Interesting Content:
 
@@ -60,5 +68,3 @@ public void onCreate(Bundle bundle) {
 
 [[01.1 - Launcher_StartActivity_E-GOI_PUSH]]
 
-
-Previously: [[00 - Manifest Analysis]]
