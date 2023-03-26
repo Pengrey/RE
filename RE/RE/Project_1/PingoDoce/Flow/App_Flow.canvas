@@ -77,7 +77,7 @@
 		{"type":"file","file":"RE/Project_1/PingoDoce/PingoDoce_Docs/Images/promo_dialog.png","id":"dea45c86697f2e81","x":-790,"y":3180,"width":234,"height":400},
 		{"type":"file","file":"RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/SearchActivity(1).md","id":"693b067ca24a427a","x":1320,"y":10260,"width":400,"height":400},
 		{"type":"file","file":"RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/SearchActivity(2).md","id":"e844cc27d7266f92","x":2000,"y":10260,"width":400,"height":400},
-		{"id":"1cbdaf15544a0084","x":1320,"y":9720,"width":80,"height":80,"type":"file","file":"RE/Project_1/PingoDoce/PingoDoce_Docs/Images/Pasted image 20230326134742.png"}
+		{"type":"file","file":"RE/Project_1/PingoDoce/PingoDoce_Docs/Images/Pasted image 20230326134742.png","id":"1cbdaf15544a0084","x":1320,"y":9720,"width":80,"height":80}
 	],
 	"edges":[
 		{"id":"54f13dc79e40886e","fromNode":"7cc22e63c9aedd4e","fromSide":"right","toNode":"2a6b1a2a1e48b121","toSide":"top"},

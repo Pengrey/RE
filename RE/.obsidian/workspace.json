@@ -1,0 +1,250 @@
+{
+  "main": {
+    "id": "d7558180d7d3705b",
+    "type": "split",
+    "children": [
+      {
+        "id": "8c071064d8952cf1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fe187d2a7cf0efa1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/SearchActivity(2).md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "93a54e89e5958fb7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/SearchActivity(1).md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f1590519922f1c84",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/03 - Exported RecoverPinActivity.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c8cbd68b6b151ea4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "RE/Project_1/PingoDoce/Flow/Pages/Main Page.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a7b588414cc32077",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/Launcher - SplashActivity.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "757b1a65e31e800a",
+    "type": "split",
+    "children": [
+      {
+        "id": "d5d9d66a1aee29d7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6433fb39c8959158",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "4f19ab38c61cd4bb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "3a9742f989dadb57",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "right": {
+    "id": "ae58d488882e654b",
+    "type": "split",
+    "children": [
+      {
+        "id": "848bcb92ede46dc4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4a631abe4ae01dbe",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/SearchActivity(2).md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0527d3a436b1bb86",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/SearchActivity(2).md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "80674c3cb330c8ed",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "700a7ab355da6fb0",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/SearchActivity(2).md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "fe187d2a7cf0efa1",
+  "lastOpenFiles": [
+    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230326153204.png",
+    "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/SearchActivity(1).md",
+    "RE/Project_1/PingoDoce/Flow/App_Flow.canvas",
+    "RE/Project_1/Report.md",
+    "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/SearchActivity(2).md",
+    "RE/Project_1/PingoDoce/PingoDoce_Docs/Images/Pasted image 20230326134742.png",
+    "RE/Project_1/PingoDoce/Flow/Pages/Promotions.md",
+    "RE/Project_1/PingoDoce/Flow/Pages/Main Page.md",
+    "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/Manifest Analysis.md",
+    "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/03 - Exported RecoverPinActivity.md",
+    "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/Launcher - SplashActivity.md",
+    "RE/Project_1/PingoDoce/Flow/Pages/Welcome Page.md",
+    "RE/Project_1/PingoDoce/PingoDoce_Docs/Images/promo_dialog.png",
+    "RE/Project_1/PingoDoce/PingoDoce_Docs/Images/promo_dialog",
+    "RE/Project_1/PingoDoce/PingoDoce_Docs/Images/Pasted image 20230325161438.png",
+    "RE/Project_1/PingoDoce/PingoDoce_Docs/Images/promocoes_dialog",
+    "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/API Error.md",
+    "RE/Project_1/PingoDoce/Flow/Pages/Intro Page.md",
+    "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/Walkthrough Activity.md",
+    "RE/Project_1/PingoDoce/Flow/Checks/VM Check.md",
+    "RE/Project_1/PingoDoce/Flow/Checks/SSL Pinning.md",
+    "RE/Project_1/PingoDoce/Flow/Checks/Root Check.md",
+    "RE/Project_1/PingoDoce/Flow/Bypasses/VM Check Bypass.md",
+    "RE/Project_1/PingoDoce/Flow/Bypasses/SSL Pinning Bypass.md",
+    "RE/Project_1/PingoDoce/Flow/Bypasses/script.md",
+    "RE/Project_1/PingoDoce/Flow/Bypasses/Root Check Bypass.md",
+    "RE/Project_1/PingoDoce/Flow/Bypasses/All Bypasses.md",
+    "RE/Project_1/CTT/Dynamic Analysis/Dynamic Analysis.md",
+    "RE/Project_1/PingoDoce/Flow/Bypasses/Script.md",
+    "RE/Project_1/PingoDoce/Flow/Bypasses/bypass.js",
+    "RE/Project_1/PingoDoce/Flow/Bypasses/Untitled",
+    "RE/Project_1/PingoDoce/Flow/API/connect/token.md",
+    "RE/Project_1/PingoDoce/Flow/API/connect/revocation.md",
+    "RE/Project_1/PingoDoce/Flow/API/catalog/search/products.md",
+    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324161950.png",
+    "RE/Project_1/PingoDoce/Flow/API/user/transactionsHistory",
+    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324154326.png",
+    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324153440.png",
+    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324153238.png",
+    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324153138.png",
+    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324145028.png",
+    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324144848.png",
+    "RE/Project_1/PingoDoce/Flow/API/identity/pinrecoverywebandsms",
+    "RE/Project_1/PingoDoce/Flow/API/takeaway/orders",
+    "RE/Project_1/PingoDoce/Flow/API/takeaway/categories",
+    "RE/Project_1/PingoDoce/Flow/API/takeaway/store",
+    "RE/Project_1/PingoDoce/Flow/API/takeaway"
+  ]
+}
