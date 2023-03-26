@@ -241,7 +241,8 @@ The `loadUrl` method in the launcher activity starts a Cordova application based
 ![[Pasted image 20230302151217.png]]
 
 #### Broadcast Receivers
-Furthermore, we identified several Broadcast Receivers being used by the CTT app, including the CurrentAccessTokenExpirationBroadcastReceiver. 
+Furthermore, we identified several Broadcast Receivers being used by the CTT app, which are capable of intercepting intents, and as such, be misused if exported, meaning it can intercept intents emitted by other applications. 
+One of them is the **CurrentAccessTokenExpirationBroadcastReceiver**. 
 ```xml
 <receiver android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver" android:exported="false">  
             <intent-filter>  
@@ -252,7 +253,7 @@ Furthermore, we identified several Broadcast Receivers being used by the CTT app
 
 We found that this receiver was not exported, meaning it cannot be accessed by other applications or components.
 
-Additionally, we found that the CampaignTrackingReceiver used by the CTT app was exported. While this receiver is a Facebook utility and not directly related to the CTT app's functionality, it can still be used as an entry point for analyzing the application.
+Additionally, we found that the **CampaignTrackingReceiver** used by the CTT app was exported. While this receiver is a Facebook utility and not directly related to the CTT app's functionality, it can still be used as an entry point for analyzing the application.
 
 The code defined in `com.facebook.CampaignTrackingReceiver` receives the `"com.android.vending.INSTALL_REFERRER"` intent.
 
@@ -286,7 +287,7 @@ public static String getInstallReferrer() {
 
 This is called only by the method `buildRequestForSession`, defined in `com.facebook.appevents.AppEventQueue` , which builds a Post request, later sent to the server in `sendEventsToServer` (in the same package).
 
-This seems to be log/analytics for Facebook, and 'installReferrer' is one of the parameters sent to the server as part of the post request.
+This seems to be log/analytics for Facebook, and `installReferrer` is one of the parameters sent to the server as part of the post request.
 
 Despite this value being seemingly easy to alter, by broadcasting an intent and following the restrictions mentioned above, the only effect this has is changing a bit of the logging information sent to the servers, and nothing else.
 
@@ -370,9 +371,78 @@ This enabled us to see and analyze network traffic, including requests and respo
 Through this process, we discovered all the HTML and JavaScript requested by the app. This was made possible by the Cordova technology. We intercepted the app's network traffic and analyzed the requests and responses exchanged between the app and the server. This allowed us to identify the different endpoints used by the app and the data being sent and received by the app.
 
 # PingoDoce
+
 ## Static Analysis
-### Manifest
-#### Activities
+### Manifest Analysis
+
+#### Exported Activities
+
+##### RecoverPinActivity
+**Manifest Snippet:**
+
+```xml
+<activity android:name="pt.pingodoce.app.presentation.login.pin.change.RecoverPinActivity" android:exported="true" 
+android:launchMode="singleTask" 
+android:screenOrientation="portrait">  
+    <intent-filter android:label="@string/app_name_label">  
+        <action android:name="android.intent.action.VIEW"/>  
+        <category android:name="android.intent.category.DEFAULT"/>  
+        <category android:name="android.intent.category.BROWSABLE"/>  
+        <data android:scheme="@string/deeplink_scheme_pin" android:host="@string/deeplink_host" android:pathPrefix="@string/deeplink_prefix_pin"/>  
+    </intent-filter>  
+</activity>
+```
+
+In this activity, the only code related to intents is the following:
+```java
+@Override // id.Functions  
+public final AbstractSavedStateViewModelFactory acceptRGPDTermsNConditionsDialog() {  
+    ViewModelFactoryByInjection ifNotNull = RecoverPinActivity
+											    .this.getIfNotNull();  
+    RecoverPinActivity recoverPinActivity = RecoverPinActivity.this;  
+    Intent intent = recoverPinActivity.getIntent();  
+    return ifNotNull.m18579b(
+    recoverPinActivity, 
+	    intent != null ? intent.getExtras() : null);  
+}
+```
+
+Unfortunately the function `m18579b` (`b()` below) couldn't be reversed.
+
+```java
+public final androidx.lifecycle.a b(androidx.savedstate.c activity, Bundle intent) {  
+        Intrinsics.isThisObjectNull(activity, "owner");  
+        return new a(activity, intent, this);  
+    }
+    
+public static final class a extends androidx.lifecycle.a {  
+
+    final /* synthetic */ d f14321d;  
+   
+    a(androidx.savedstate.c cVar, Bundle bundle, d dVar) {  
+        super(cVar, bundle);  
+        this.f14321d = dVar;  
+    }  
+  
+    @Override // androidx.lifecycle.a  
+    protected <T extends o0> T d(String str, Class<T> cls, l0 l0Var) {  
+        Intrinsics.isThisObjectNull(str, "key");  
+        Intrinsics.isThisObjectNull(cls, "modelClass");  
+        Intrinsics.isThisObjectNull(l0Var, "handle");  
+        b bVar = (b) this.f14321d.f14320a.get(cls);  
+        T t10 = bVar != null ? (T) bVar.a(l0Var) : null;  
+        if (t10 != null) {  
+            return t10;  
+        }  
+        throw new IllegalStateException("Unknown ViewModel class");  
+	}  
+}
+    
+``` 
+
+As such, no further analysis was possible.
+
+##### Launcher - Splash Activity
 During the static analysis of the Pingodoce app, the launcher activity `SplashActivity` was identified as the one that is launched when a user opens the application via its homescreen icon. This was confirmed by analyzing the manifest file of the app.
 ```xml
 <activity android:theme="@style/App.Splash"
@@ -388,6 +458,29 @@ android:screenOrientation="portrait">
 
 As this activity has set an intent-filter for `LAUNCHER`, this is the activity that is ran when a user opens the application via its homescreen icon.
 ![[launcher_icon.png]]
+
+>[!NOTE]
+>In the `onCreate` method of  `SplashActivity`, there is a check for the presence of an 'extra' field called `E-GOI-PUSH` in the intent. If this field is present, the app tries to launch a new activity called `NotificationLandingActivity` with the intent as an argument.
+>Decompiled and cleaned up code:
+>```java
+>@Override 
+public void onCreate(Bundle bundle) {  
+> 	super.onCreate(bundle);
+> 	if (getIntent().hasExtra("E-GOI_PUSH")) {  
+> 		Intent intent = getIntent();  
+> 		Intrinsics.checkIfNull(intent, "intent");  
+> 		NotificationLandingActivity.
+> 			startActivityWithIntentIfNotNull(this, intent);  
+> 		return;  
+> 	}  
+>```
+>
+>This code starts a new activity. Due to the structure of the intent's constructor, this seems to be the  types used:
+>![[Pasted image 20230315180117.png]]
+>(Source: Google's [Developer Docs](https://developer.android.com/reference/android/content/Intent))
+>
+>Here, the Context has this Class signature: `pt.pingodoce.app.services.NotificationLandingActivity.class`
+
 
 After launching the application, Pingodoce's app checks if it is running with root permissions or if it is running inside a virtual machine.
 
@@ -477,7 +570,7 @@ The app also has a check in place to see if it's running inside a virtual machin
     }
 ```
 
-The relevant code for this check can be seen in the provided Java snippet:
+The relevant code for this check can be seen in the provided (decompiled) Java snippet:
 ```java
 private final boolean h() {
 	r10 = this;
@@ -601,7 +694,13 @@ m.h is called
 Tampering result: true
 ```
 
-By searching for a specific text displayed on the screen in Jadx, it is possible to locate the corresponding string resource that contains the text. In this case, the string resource with the name `"lbl_walkthrough_step1"` is found in `res/values/strings.xml`. This string resource is then used in `res/layout/fragment_walkthrough_step1.xml`, which is inflated in the `AppWalkThroughStep1Fragment` class extending `WalkThroughFragment`. By searching for the name of this class, we can find the `AppWalkThroughActivity`.
+
+When the user clicks on the "OK FUI AVISADO" button and the root or VM check fails, a promotional screen showcasing the app's functionalities is displayed. 
+
+![[IntroPage.gif]]
+
+By searching for a specific text displayed on the screen in Jadx, it is possible to locate the corresponding string resource that contains the text. In this case, the string resource for the text `Os meus folhetos` can be found with the name `"lbl_walkthrough_step1"` n `res/values/strings.xml`.
+This string resource is then used in `res/layout/fragment_walkthrough_step1.xml`, which is inflated in the `AppWalkThroughStep1Fragment` class extending `WalkThroughFragment`. By searching for the name of this class, we can find the `AppWalkThroughActivity`.
 
 This activity can then be traced back to `SplashActivity` using the following code (slightly obfuscated):
 ```java
@@ -617,9 +716,6 @@ if (Intrinsics.equals(c13801l.getPossibleFirstLaunchBool(), Boolean.TRUE)) {
 }
 ```
 
-When the user clicks on the "OK FUI AVISADO" button and the root or VM check fails, a promotional screen showcasing the app's functionalities is displayed. By following the above code flow, we can determine that this screen is launched from `SplashActivity`.
-
-![[IntroPage.gif]]
 
 After this walkthrough is either skipped or completed the user is greeted with a Welcome Page:
 ![[Pasted image 20230323171404.png]]
@@ -681,32 +777,378 @@ and this object is used in the method below:
 However, no indication as to what went wrong is given with this approach. If the error isn't encountered, we're greeted with a notification request prompt.
 ![[promo_dialog.png]]
 
-By choosing one of the two options provided we we're then directed to the Main Page.
+By choosing one of the two options provided we were then directed to the Main Page.
 ![[Pasted image 20230326153204.png]]
 
-The primary activity associated with this page is `HomeActivity`, and during the first launch, the user is presented with a tutorial through coach marks. If one searches for the text present in the interface (which corresponds to the string resource `btn_store`), they can identify that it is part of `pt.pingodoce.app.presentation.home.HomeCoachMarks$showCoachMarksForLoyalty$2`. However, we will not delve into this any further here.
+The main activity associated with this page is `HomeActivity`, and during the first launch, the user is presented with a tutorial through coach marks. If one searches for the text present in the interface (which corresponds to the string resource `btn_store`), they can identify that it is part of `pt.pingodoce.app.presentation.home.HomeCoachMarks$showCoachMarksForLoyalty$2`. However, we will not delve into this any further here.
 
->[!NOTE]
->In the `onCreate` method of the `MainActivity`, there is a check for the presence of an 'extra' field called `E-GOI-PUSH` in the intent. If this field is present, the app tries to launch a new activity called `NotificationLandingActivity` with the intent as an argument.
->Decompiled and cleaned up code:
->```java
->@Override 
-public void onCreate(Bundle bundle) {  
-> 	super.onCreate(bundle);
-> 	if (getIntent().hasExtra("E-GOI_PUSH")) {  
-> 		Intent intent = getIntent();  
-> 		Intrinsics.checkIfNull(intent, "intent");  
-> 		NotificationLandingActivity.
-> 			startActivityWithIntentIfNotNull(this, intent);  
-> 		return;  
-> 	}  
->```
->
->This code starts a new activity. Due to the structure of the intent's constructor, this seems to be the  types used:
->![[Pasted image 20230315180117.png]]
->(Source: Google's [Developer Docs](https://developer.android.com/reference/android/content/Intent))
->
->Here, the Context is 'activityC0325c' and the Class signature is `pt.pingodoce.app.services.NotificationLandingActivity.class`
+### Unlock Screen
+![[Pasted image 20230324141047.png]]
+
+The method that handles the validation of the pin can be found in `pt.pingodoce.app.presentation.login.phone.update.ValidatePinForUpdatePhoneViewModel$onPinCompleted$1$1`, which was not further analyzed.
+
+### Promotions Screen
+![[Pasted image 20230324143827.png]]
+
+The activity for this screen is `PromotionActivity`, and its package is `pt.pingodoce.app.presentation.promotion`.
+
+
+
+#### Search
+
+This is the code present in PromotionActivity that seems to handle search (then calling on SearchActivity methods):
+
+```java
+public static final boolean A1(PromotionActivity promotionActivity,
+							   MenuItem menuItem) {  
+    Intrinsics.isThisObjectNull(promotionActivity, "this$0");  
+    Integer valueOf = menuItem != null ? 
+							    Integer.valueOf(menuItem.getItemId()) :
+							    null;  
+    if (valueOf != null && valueOf.intValue() == R.id.action_search) {  
+	    SearchActivityHelper.setExtrasOnIntentWrapper(
+		    promotionActivity.f20096j0, promotionActivity,
+		    Boolean.TRUE, null, 4, null);  
+	    return true;  
+    }  
+    return false;  
+}
+```
+
+This code gets the value of a *certain* menu item ID, and then if it corresponds to `R.id.action_search` it will call methods from `SearchActivityHelper` (Further detailed ahead) in order to create an intent.
+
+`R.id.action_search` is referenced in `Toolbar`, `ShoppingListActivity`, `HomeActivity`  and `FlyerActivity`, so it likely is related to the search icon present in the toolbar in multiple screens.
+![[Pasted image 20230326134742.png]]
+
+### Search 
+#### SearchActivityHelper
+This activity contains methods that are used to create/structure intents seemingly for the various search functions in the app.
+
+From the [[Promotions]] page (`PromotionActivity`) the following decompiled methods are called:
+
+```java
+public static /* synthetic */ void callSearchAfterMatch(androidx.activity.result.b bVar, Activity activity, Boolean bool, Integer num, int i10, Object obj) {  
+    if ((i10 & 2) != 0) {  
+        bool = null;  
+    }  
+    if ((i10 & 4) != 0) {  
+        num = null;  
+    }  
+    a(bVar, activity, bool, num);  
+}
+
+public static final void a(androidx.activity.result.b<Intent> bVar, Activity activity, Boolean bool, Integer num) {  
+        Intrinsics.isThisObjectNull(bVar, "<this>");  
+        Intrinsics.isThisObjectNull(activity, "context");  
+        Intent intent = new Intent(activity, pt.pingodoce.app.presentation.common.search.SearchActivity.class);  
+        if (bool != null) {  
+            bool.booleanValue();  
+            intent.putExtra("EXTRA_FOR_HAS_PROMO", bool.booleanValue());  
+        }  
+        if (num != null) {  
+            num.intValue();  
+            intent.putExtra("EXTRA_FOR_FLYER_ID", num.intValue());  
+        }  
+        bVar.a(intent);  
+    }
+    
+```
+
+and these can be cleaned up into:
+```java
+public static final void setExtrasOnIntent(androidx.activity.result.b<Intent> intentWrapper, Activity activity, Boolean bool, Integer num) {  
+    Intrinsics.isThisObjectNull(intentWrapper, "<this>");  
+    Intrinsics.isThisObjectNull(activity, "context");  
+    Intent intent = new Intent(activity, SearchActivity.class);  
+    if (bool != null) {  
+        bool.booleanValue();  
+        intent.putExtra("EXTRA_FOR_HAS_PROMO", bool.booleanValue());  
+    }  
+    if (num != null) {  
+        num.intValue();  
+        intent.putExtra("EXTRA_FOR_FLYER_ID", num.intValue());  
+    }  
+    intentWrapper.doSomethingWithIntent(intent);  
+}
+
+
+public static void setExtrasOnIntentWrapper(androidx.activity.result.b bVar, Activity activity, Boolean bool, Integer num, int sel, Object obj) {  
+    if (sel==2) {  
+        bool = null;  
+    }  
+    if (sel==4) {  
+        num = null;  
+    }  
+    setExtrasOnIntent(bVar, activity, bool, num);  
+}
+```
+
+
+So, this method will handle creation of an Intent, and depending on the value that is passed to `setExtrasOnIntentWrapper`, different Extra fields will be added to the Intent.
+
+`EXTRA_FOR_HAS_PROMO` and `EXTRA_FOR_FLYER_ID` are later accessed in `SearchActivity`, and seen in the following code:
+
+```java
+private final void U1() {  
+        ((pt.pingodoce.app.presentation.common.search.a) I0()).o1(getIntent().getBooleanExtra("EXTRA_FOR_HAS_PROMO", false));  
+        int intExtra = getIntent().getIntExtra("EXTRA_FOR_FLYER_ID", -1);  
+        if (intExtra != -1) {  
+            ((pt.pingodoce.app.presentation.common.search.a) I0()).n1(intExtra);  
+        }  
+        String stringExtra = getIntent().getStringExtra("EXTRA_FOR_QUERY");  
+        if (stringExtra != null) {  
+            K1().d0(stringExtra, true);  
+        }  
+    }
+
+// Cleaned up
+
+  
+private final void handlePromoIntent() {  
+    aSearchViewModel().setPromo(
+	    getIntent().getBooleanExtra("EXTRA_FOR_HAS_PROMO", false));  
+    int intExtra = getIntent().getIntExtra("EXTRA_FOR_FLYER_ID", -1);  
+    if (intExtra != -1) {  
+        aSearchViewModel().setFlyerId(intExtra);  
+    }  
+    String stringExtra = getIntent().getStringExtra("EXTRA_FOR_QUERY");  
+    if (stringExtra != null) {  
+        aSearchView().setTextForAutoComplete(stringExtra, true);  
+        }  
+    }
+```
+
+These Extra Intent fields seem to be used to determine which data to fill the search ViewModel and related components.
+
+A similar method in this class does roughly the same for `EXTRA_FOR_TRADE` and `EXTRA_FOR_QUERY` which are also accessed in that same activity but not further explored.
+
+### Shopping List Page
+
+![[Pasted image 20230324144230.png]]
+
+The activity for this screen is `ShoppingListActivity`, and its package is `pt.pingodoce.presentation.shoppingList`.
+
+
+#### Shopping List (Object)
+
+This object seems to describe a single Shopping List, which are created by the user in the above screen.
+The data structure for shopping lists is the following:
+```
+description - string
+isActive - boolean
+products - List of ShoppingListProduct
+sharedWith - List of Friend
+dateCreated - String  
+dateUpdated - String
+id - String
+clientId - String  
+userId - String
+name - String
+```
+
+This is an average Java Object with getters and setters and methods to, for example, add Friends to `sharedWith`.
+
+#### Shopping List Category (Object)
+
+```
+name - string
+color - string
+sortOrder - int
+```
+
+#### Shopping List Product (Object)
+
+```
+id - int
+category - ShoppingListCategory
+name - string
+unitLabel - string
+badgeUrl - string
+badgeDisclaimer - string
+showBadgeDisclaimer - bool
+badgeDisclaimerTitle - string
+promotionCode - string 
+priceLabel - string
+unitPriceLabel - string
+dateUpdated - string
+sortOrder - int
+manualOrder - int
+deleted - bool
+timeStamp - long
+quantity - int
+checked - bool
+``` 
+
+### TakeAway Page
+
+![[Pasted image 20230324145028.png]]
+
+The activity for this screen is `TakeAwayStoreActivity`, and its package is `pt.pingodoce.app.presentation.takeaway.pickupstore`
+
+#### TakeAway Categories
+
+![[Pasted image 20230324153138.png]]
+
+The activity for this screen is `TakeAwayCategory`, and its package is `pt.pingodoce.app.data.local.models.takeaway`.
+
+##### TakeAwayCategory (Data Model)
+
+The class for this object is `TakeAwayCategory`, and its package is `pt.pingodoce.app.data.local.models.takeaway`.
+
+Object structure:
+```
+code - string
+name - straing
+imageUrl - string
+isHighlight - boolean
+```
+
+
+#### API Interaction
+This is the interface the app uses to interact with the API.
+
+```java
+public interface TakeAwayApi {
+    @POST("https://app-proxy.pingodoce.pt/api/v2/takeaway/orders/cancel")
+    Object cancelOrder(@Body TakeAwayOrderCancellationRequest takeAwayOrderCancellationRequest, d<? super Response<u>> dVar);
+
+    @GET("https://app-proxy.pingodoce.pt/api/v2/takeaway/categories")
+    Object categories(@Query("storeId") int i10, @Query("pickUpDate") String str, d<? super Response<List<TakeAwayCategory>>> dVar);
+
+    @GET("https://app-proxy.pingodoce.pt/api/v2/takeaway/categories/{id}")
+    Object categoryProducts(@Path("id") String str, @Query("storeId") int i10, @Query("pickUpDate") String str2, @Query("pageNumber") int i11, @Query("pageSize") int i12, d<? super Response<List<TakeAwayProduct>>> dVar);
+
+    @GET("https://app-proxy.pingodoce.pt/api/v2/takeaway/orders")
+    Object orders(d<? super Response<List<TakeAwayOrder>>> dVar);
+
+    @POST("https://app-proxy.pingodoce.pt/api/v2/takeaway/orders")
+    Object placeOrder(@Body TakeAwayOrder takeAwayOrder, d<? super Response<TakeAwayOrderResponse>> dVar);
+
+    @GET("https://app-proxy.pingodoce.pt/api/v2/takeaway/status")
+    Object status(d<? super Response<TakeAwayStatus>> dVar);
+
+    @GET("https://app-proxy.pingodoce.pt/api/v2/takeaway/store/{id}")
+    Object takeAwaySchedules(@Path("id") int i10, d<? super Response<Store>> dVar);
+}
+```
+
+These methods are called elsewhere in the app but the code involved was not understood. It is displayed below as-is:
+
+The method `placeOrder` is invoked in `TakeAwayManager`:
+
+```java
+  /* compiled from: TakeAwayManager.kt */  
+    @kotlin.coroutines.jvm.internal.f(
+    c = "pt.pingodoce.app.data.managers.TakeAwayManager", 
+    f = "TakeAwayManager.kt", 
+    l = {179}, 
+    m = "placeOrder")  
+
+    public static final class h extends kotlin.coroutines.jvm.internal.d {  
+        /* synthetic */ Object f15724w;  
+        int f15726y;  
+        h(bd.d<? super h> dVar) {  
+            super(dVar);  
+            m1.this = r1;  
+        }  
+        @Override // kotlin.coroutines.jvm.internal.a  
+        public final Object invokeSuspend(Object obj) {  
+            this.f15724w = obj;  
+            this.f15726y |= Integer.MIN_VALUE;  
+            return m1.this.w(null, this);  
+        }  
+    }
+```
+
+and in `TakeAwayService`:
+
+```java
+  
+    @kotlin.coroutines.jvm.internal.f(
+    c = "pt.pingodoce.app.data.remote.services.TakeAwayService$placeOrder$2", 
+    f = "TakeAwayService.kt",
+    l = {44}, 
+    m = "invokeSuspend"
+    )  
+    /* loaded from: classes2.dex */  
+public static final class e extends kotlin.coroutines.jvm.internal.l 
+	implements id.l<bd.d<? super Response<TakeAwayOrderResponse>>, Object> {  
+  
+        /* renamed from: x  reason: collision with root package name */  
+        int f23868x;  
+  
+        /* renamed from: z  reason: collision with root package name */  
+        final /* synthetic */ TakeAwayOrder f23870z;  
+  
+        /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */  
+        e(TakeAwayOrder takeAwayOrder, bd.d<? super e> dVar) {  
+            super(1, dVar);  
+            this.f23870z = takeAwayOrder;  
+        }  
+  
+        @Override // kotlin.coroutines.jvm.internal.a  
+        public final bd.d<yc.u> create(bd.d<?> dVar) {  
+            return new e(this.f23870z, dVar);  
+        }  
+  
+        @Override // id.l  
+        /* renamed from: d */  
+        public final Object invoke(bd.d<? super Response<TakeAwayOrderResponse>> dVar) {  
+            return ((e) create(dVar)).invokeSuspend(yc.u.f27252a);  
+        }  
+  
+        @Override // kotlin.coroutines.jvm.internal.a  
+        public final Object invokeSuspend(Object obj) {  
+            Object d10;  
+            d10 = cd.d.d();  
+            int i10 = this.f23868x;  
+            if (i10 == 0) {  
+                yc.n.b(obj);  
+                TakeAwayApi takeAwayApi = i0.this.f23856d;  
+                TakeAwayOrder takeAwayOrder = this.f23870z;  
+                this.f23868x = 1;  
+                obj = takeAwayApi.placeOrder(takeAwayOrder, this);  
+                if (obj == d10) {  
+                    return d10;  
+                }  
+            } else if (i10 != 1) {  
+                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");  
+            } else {  
+                yc.n.b(obj);  
+            }  
+            return obj;  
+        }  
+    }
+```
+
+### Confirm Order Page
+
+![[Pasted image 20230324153238.png]]
+
+
+#### Page layout
+This function sets the title of the page (In the picture above, `A sua encomenda (1)`).
+
+```java
+public final void X1(int i10) {  
+    String string;  
+    Toolbar toolbar = G1().f24771x;  
+    if (this.f18266h0) {  
+        c0 c0Var = c0.f13926a;  
+        String string2 = getString(R.string.lbl_take_away_checkout_alt);  
+        string = String.format(string2, Arrays.copyOf(new Object[]{Integer.valueOf(i10)}, 1));  
+    } else {  
+        string = getString(R.string.lbl_take_away_checkout);  
+    }  
+    toolbar.setTitle(string);  
+}
+    ```
+
+#### Orders View
+
+![[Pasted image 20230324153440.png]]
+
+It wasn't possible to ascertain for sure but the activity for this page is likely `TakeAwayOrderListActivity`, since looking for the string `Encomendas` in the app's resources points to  `R.layout.activity_take_away_order_list;`, which is returned here, likely to be inflated.
 
 ## Dynamic Analysis
 During the dynamic analysis of the PingoDoce app, we encountered some challenges due to SSL pinning implemented by the app. This prevented us from intercepting traffic using the certificate we installed on the testing emulator.
