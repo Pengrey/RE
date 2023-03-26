@@ -73,8 +73,8 @@
 		{"type":"file","file":"RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/01.1 - Launcher_StartActivity_E-GOI_PUSH.md","id":"5b284d82589977c6","x":3920,"y":1520,"width":400,"height":400},
 		{"type":"file","file":"RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/Manifest Analysis.md","id":"4eb04e133da8b14b","x":2950,"y":880,"width":400,"height":400},
 		{"type":"file","file":"RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/Launcher - SplashActivity.md","id":"d97bcd835fa11622","x":2855,"y":2040,"width":590,"height":654},
-		{"id":"36ea75b1a787956e","x":-480,"y":3459,"width":250,"height":50,"type":"text","text":"if first time opening"},
-		{"id":"dea45c86697f2e81","x":-790,"y":3180,"width":234,"height":400,"type":"file","file":"RE/Project_1/PingoDoce/PingoDoce_Docs/Images/promo_dialog.png"}
+		{"type":"text","text":"if first time opening","id":"36ea75b1a787956e","x":-480,"y":3459,"width":250,"height":50},
+		{"type":"file","file":"RE/Project_1/PingoDoce/PingoDoce_Docs/Images/promo_dialog.png","id":"dea45c86697f2e81","x":-790,"y":3180,"width":234,"height":400}
 	],
 	"edges":[
 		{"id":"54f13dc79e40886e","fromNode":"7cc22e63c9aedd4e","fromSide":"right","toNode":"2a6b1a2a1e48b121","toSide":"top"},
