@@ -364,3 +364,343 @@ This enabled us to see and analyze network traffic, including requests and respo
 ![[Pasted image 20230314161630.png]]
 
 Through this process, we discovered all the HTML and JavaScript requested by the app. This was made possible by the Cordova technology. We intercepted the app's network traffic and analyzed the requests and responses exchanged between the app and the server. This allowed us to identify the different endpoints used by the app and the data being sent and received by the app.
+
+# PingoDoce
+## Static Analysis
+### Manifest
+#### Activities
+During the static analysis of the Pingodoce app, the launcher activity `SplashActivity` was identified as the one that is launched when a user opens the application via its homescreen icon. This was confirmed by analyzing the manifest file of the app.
+```xml
+<activity android:theme="@style/App.Splash"
+android:name="pt.pingodoce.app.presentation.landing.splash.SplashActivity" 
+android:exported="true" 
+android:screenOrientation="portrait">  
+<intent-filter>  
+    <action android:name="android.intent.action.MAIN"/>  
+        <category android:name="android.intent.category.LAUNCHER"/>  
+    </intent-filter>  
+</activity>        
+```
+
+As this activity has set an intent-filter for `LAUNCHER`, this is the activity that is ran when a user opens the application via its homescreen icon.
+![[launcher_icon.png]]
+
+After launching the application, Pingodoce's app checks if it is running with root permissions or if it is running inside a virtual machine.
+
+The code is checking for the presence of root on the device. It uses the  [RootBeer](https://github.com/scottyab/rootbeer) library to perform the check. The check is called from the `ai.m` class and it resides on the class `nc.b`:
+```java
+package nc;
+
+<SNIP>
+
+/* compiled from: RootBeer.java */
+/* loaded from: classes2.dex */
+public class b {
+<SNIP>
+```
+
+The `RootBeer` library has a set of methods that perform various checks to determine whether the device is rooted. The library uses a combination of checks to determine whether a device is rooted or not. Some of the checks include:
+
+-   Checking for the presence of specific files and directories that are present on rooted devices.
+-   Checking if any of the installed apps on the device have been granted root access.
+-   Checking if the device has any of the known root management apps installed.
+-   Checking if the `su` binary is present on the device.
+-   Checking if the device is in debug mode.
+
+If any of these checks succeed, then the device is considered rooted. The `RootBeer` library returns a boolean value indicating whether the device is rooted or not.
+
+The `ai.m` class invokes the `a()` method of the `RootBeer` library to perform the root check. 
+```java
+    @Override // ai.n
+    public void a() {
+        if (this.f323c.o()) {
+            new b.a(this.f321a, 2131951632).p(R.string.alert_device_has_root_title).g(R.string.alert_device_has_root_message).i(g() ? R.string.alert_device_has_root_exit : R.string.alert_device_has_root_exit_alt, new DialogInterface.OnClickListener() { // from class: ai.l
+                {
+                    m.this = this;
+                }
+
+                @Override // android.content.DialogInterface.OnClickListener
+                public final void onClick(DialogInterface dialogInterface, int i10) {
+                    m.e(m.this, dialogInterface, i10);
+                }
+            }).d(false).a().show();
+        }
+        <SNIP>
+    }
+```
+
+If the device is rooted, then a dialog is displayed to the user with the message `"Dispositivo não seguro"` indicating that the device is rooted. The user is also given an option to proceed.
+
+This check can be bypassed by the use of the Frida tool with the help of [RootCheckBypass.js](https://gist.githubusercontent.com/pich4ya/0b2a8592d3c8d5df9c34b8d185d2ea35/raw/db83ed8d4d3dfc29687724e4393e173362b1d7a9/root_bypass.js)
+```powershell
+PS > frida -U -l .\RootCheckBypass.js -f pt.pingodoce
+     ____
+    / _  |   Frida 16.0.10 - A world-class dynamic instrumentation toolkit
+   | (_| |
+    > _  |   Commands:
+   /_/ |_|       help      -> Displays the help system
+   . . . .       object?   -> Display information about 'object'
+   . . . .       exit/quit -> Exit
+   . . . .
+   . . . .   More info at https://frida.re/docs/home/
+   . . . .
+   . . . .   Connected to Android Emulator 5554 (id=emulator-5554)
+Spawned `pt.pingodoce`. Resuming main thread!
+<SNIP>
+[Android Emulator 5554::pt.pingodoce ]->
+```
+
+This indicates a potential security issue as a malicious user with root access to their device could also bypass this check and potentially exploit the app's vulnerabilities. It's recommend to impre the root detection mechanism to prevent such bypasses.
+
+The app also has a check in place to see if it's running inside a virtual machine (VM). This check is called on the `ai.m` class, specifically in the `a()` method. If the check determines that the app is running inside a VM, then a dialog is displayed to the user with the message `"Emulador detectado"` and an option to proceed. 
+```java
+    @Override // ai.n
+    public void a() {
+        if (this.f323c.o()) {
+			<SNIP>
+        } else if (h()) {
+            new b.a(this.f321a, 2131951632).p(R.string.alert_device_is_emulator_title).g(R.string.alert_device_is_emulator_message).i(g() ? R.string.alert_device_is_emulator_exit : R.string.alert_device_is_emulator_exit_alt, new DialogInterface.OnClickListener() { // from class: ai.k
+                {
+                    m.this = this;
+                }
+
+                @Override // android.content.DialogInterface.OnClickListener
+                public final void onClick(DialogInterface dialogInterface, int i10) {
+                    m.f(m.this, dialogInterface, i10);
+                }
+            }).d(false).a().show();
+        }
+    }
+```
+
+The relevant code for this check can be seen in the provided Java snippet:
+```java
+private final boolean h() {
+	r10 = this;
+	java.lang.String r0 = android.os.Build.FINGERPRINT
+	java.lang.String r1 = "FINGERPRINT"
+	jd.l.g(r0, r1)
+	java.lang.String r2 = "google/sdk_gphone_"
+	r3 = 0
+	r4 = 2
+	r5 = 0
+	boolean r2 = sd.k.C(r0, r2, r3, r4, r5)
+	java.lang.String r6 = "PRODUCT"
+	java.lang.String r7 = "MODEL"
+	if (r2 == 0) goto L4d
+	jd.l.g(r0, r1)
+	java.lang.String r2 = ":user/release-keys"
+	boolean r2 = sd.k.p(r0, r2, r3, r4, r5)
+	if (r2 == 0) goto L4d
+	java.lang.String r2 = android.os.Build.MANUFACTURER
+	java.lang.String r8 = "Google"
+	boolean r2 = jd.l.c(r2, r8)
+	if (r2 == 0) goto L4d
+	java.lang.String r2 = android.os.Build.PRODUCT
+	jd.l.g(r2, r6)
+	java.lang.String r8 = "sdk_gphone_"
+	boolean r2 = sd.k.C(r2, r8, r3, r4, r5)
+	if (r2 == 0) goto L4d
+	java.lang.String r2 = android.os.Build.BRAND
+	java.lang.String r9 = "google"
+	boolean r2 = jd.l.c(r2, r9)
+	if (r2 == 0) goto L4d
+	java.lang.String r2 = android.os.Build.MODEL
+	jd.l.g(r2, r7)
+	boolean r2 = sd.k.C(r2, r8, r3, r4, r5)
+	if (r2 != 0) goto Lcd
+L4d:
+	jd.l.g(r0, r1)
+	java.lang.String r2 = "generic"
+	boolean r8 = sd.k.C(r0, r2, r3, r4, r5)
+	if (r8 != 0) goto Lcd
+	jd.l.g(r0, r1)
+	java.lang.String r1 = "unknown"
+	boolean r0 = sd.k.C(r0, r1, r3, r4, r5)
+	if (r0 != 0) goto Lcd
+	java.lang.String r0 = android.os.Build.MODEL
+	jd.l.g(r0, r7)
+	java.lang.String r1 = "google_sdk"
+	boolean r8 = sd.k.H(r0, r1, r3, r4, r5)
+	if (r8 != 0) goto Lcd
+	jd.l.g(r0, r7)
+	java.lang.String r8 = "Emulator"
+	boolean r8 = sd.k.H(r0, r8, r3, r4, r5)
+	if (r8 != 0) goto Lcd
+	jd.l.g(r0, r7)
+	java.lang.String r7 = "Android SDK built for x86"
+	boolean r0 = sd.k.H(r0, r7, r3, r4, r5)
+	if (r0 != 0) goto Lcd
+	java.lang.String r0 = android.os.Build.MANUFACTURER
+	java.lang.String r7 = "MANUFACTURER"
+	jd.l.g(r0, r7)
+	java.lang.String r8 = "VMware"
+	boolean r8 = sd.k.H(r0, r8, r3, r4, r5)
+	if (r8 != 0) goto Lcd
+	jd.l.g(r0, r7)
+	java.lang.String r7 = "Genymotion"
+	boolean r0 = sd.k.H(r0, r7, r3, r4, r5)
+	if (r0 != 0) goto Lcd
+	java.lang.String r0 = android.os.Build.BRAND
+	java.lang.String r7 = "BRAND"
+	jd.l.g(r0, r7)
+	boolean r0 = sd.k.C(r0, r2, r3, r4, r5)
+	if (r0 == 0) goto Lba
+	java.lang.String r0 = android.os.Build.DEVICE
+	java.lang.String r7 = "DEVICE"
+	jd.l.g(r0, r7)
+	boolean r0 = sd.k.C(r0, r2, r3, r4, r5)
+	if (r0 != 0) goto Lcd
+Lba:
+	java.lang.String r0 = android.os.Build.PRODUCT
+	boolean r1 = jd.l.c(r0, r1)
+	if (r1 != 0) goto Lcd
+	jd.l.g(r0, r6)
+	java.lang.String r1 = "vbox86p"
+	boolean r0 = sd.k.H(r0, r1, r3, r4, r5)
+	if (r0 == 0) goto Lce
+Lcd:
+	r3 = 1
+Lce:
+	return r3
+throw new UnsupportedOperationException("Method not decompiled: ai.m.h():boolean");
+    }
+```
+
+The check for running inside a VM can be bypassed using a Frida script. The script hooks the `h()` method of the `ai.m` class as shown below:
+```java
+let m = Java.use("ai.m"); m["h"].implementation = function () {
+	console.log(`m.h is called`);
+	let result = this["h"]();
+	console.log(`Tampering result: ${result}`);
+	return false;
+};
+```
+
+Once the script is executed, it replaces the original implementation of the `h()` method with a custom implementation that always returns `false`. As a result, the app is fooled into believing that it is not running inside a VM.
+```powershell
+PS C:\Users\rodri\Desktop\ER\Frida> frida -U -l '.\Root&VMCheckBypass.js' -f pt.pingodoce
+     ____
+    / _  |   Frida 16.0.10 - A world-class dynamic instrumentation toolkit
+   | (_| |
+    > _  |   Commands:
+   /_/ |_|       help      -> Displays the help system
+   . . . .       object?   -> Display information about 'object'
+   . . . .       exit/quit -> Exit
+   . . . .
+   . . . .   More info at https://frida.re/docs/home/
+   . . . .
+   . . . .   Connected to Android Emulator 5554 (id=emulator-5554)
+Spawned `pt.pingodoce`. Resuming main thread!
+<SNIP>
+m.h is called
+Tampering result: true
+```
+
+By searching for a specific text displayed on the screen in Jadx, it is possible to locate the corresponding string resource that contains the text. In this case, the string resource with the name `"lbl_walkthrough_step1"` is found in `res/values/strings.xml`. This string resource is then used in `res/layout/fragment_walkthrough_step1.xml`, which is inflated in the `AppWalkThroughStep1Fragment` class extending `WalkThroughFragment`. By searching for the name of this class, we can find the `AppWalkThroughActivity`.
+
+This activity can then be traced back to `SplashActivity` using the following code (slightly obfuscated):
+```java
+if (Intrinsics.equals(c13182l.m1459d(), Boolean.TRUE)) {  
+    AppWalkThroughActivity.m22601a(SplashActivity.this);  
+}
+```
+
+After some code analysis and renaming, the following code is obtained:
+```java
+if (Intrinsics.equals(c13801l.getPossibleFirstLaunchBool(), Boolean.TRUE)) {  
+    AppWalkThroughActivity.launchAppWalkThroughActivityIfNotNull(SplashActivity.this);
+}
+```
+
+When the user clicks on the "OK FUI AVISADO" button and the root or VM check fails, a promotional screen showcasing the app's functionalities is displayed. By following the above code flow, we can determine that this screen is launched from `SplashActivity`.
+
+![[IntroPage.gif]]
+
+After this walkthrough is either skipped or completed the user is greeted with a Welcome Page:
+![[Pasted image 20230323171404.png]]
+
+The page referred to as `IntroActivity` is encountered at this stage.
+
+When attempting to click the 'ou entrar sem conta' button on the emulator, an error is generated:
+![[Pasted image 20230325161438.png]]
+This message can be traced back to the string resource `err_api_generic` which is then used to throw an API Error:
+```java
+package af;  
+  
+import p181jd.Intrinsics;  
+  
+/* compiled from: ApiError.kt */  
+/* renamed from: af.a */  
+/* loaded from: classes2.dex */  
+public final class APIError {  
+  
+    /* renamed from: a */  
+    private final String errorMessage;  
+  
+    public APIError(String str) {  
+        Intrinsics.isThisObjectNull(str, "message");  
+        this.errorMessage = str;  
+    }  
+  
+    /* renamed from: a */  
+    public final String getMessage() {  
+        return this.errorMessage;  
+    }  
+  
+    public boolean equals(Object obj) {  
+        if (this == obj) {  
+            return true;  
+        }  
+        return (obj instanceof APIError) && Intrinsics.equals(this.errorMessage, ((APIError) obj).errorMessage);  
+    }  
+  
+    public int hashCode() {  
+        return this.errorMessage.hashCode();  
+    }  
+  
+    public String toString() {  
+        String str = this.errorMessage;  
+        return "ApiError(message=" + str + ")";  
+    }  
+}
+```
+and this object is used in the method below:
+```java
+    public final APIError throwAPIError(int i) {  
+        String string = this.f13109a.m6477a().getString(i);  
+        Intrinsics.checkIfNull(string, "ctx.getString(id)");  
+        return new APIError(string);  
+    }
+```
+
+However, no indication as to what went wrong is given with this approach. If the error isn't encountered, we're greeted with a notification request prompt.
+![[promo_dialog.png]]
+
+By choosing one of the two options provided we we're then directed to the Main Page.
+![[Pasted image 20230326153204.png]]
+
+The primary activity associated with this page is `HomeActivity`, and during the first launch, the user is presented with a tutorial through coach marks. If one searches for the text present in the interface (which corresponds to the string resource `btn_store`), they can identify that it is part of `pt.pingodoce.app.presentation.home.HomeCoachMarks$showCoachMarksForLoyalty$2`. However, we will not delve into this any further here.
+
+>[!NOTE]
+>In the `onCreate` method of the `MainActivity`, there is a check for the presence of an 'extra' field called `E-GOI-PUSH` in the intent. If this field is present, the app tries to launch a new activity called `NotificationLandingActivity` with the intent as an argument.
+>Decompiled and cleaned up code:
+>```java
+>@Override 
+public void onCreate(Bundle bundle) {  
+> 	super.onCreate(bundle);
+> 	if (getIntent().hasExtra("E-GOI_PUSH")) {  
+> 		Intent intent = getIntent();  
+> 		Intrinsics.checkIfNull(intent, "intent");  
+> 		NotificationLandingActivity.
+> 			startActivityWithIntentIfNotNull(this, intent);  
+> 		return;  
+> 	}  
+>```
+>
+>This code starts a new activity. Due to the structure of the intent's constructor, this seems to be the  types used:
+>![[Pasted image 20230315180117.png]]
+>(Source: Google's [Developer Docs](https://developer.android.com/reference/android/content/Intent))
+>
+>Here, the Context is 'activityC0325c' and the Class signature is `pt.pingodoce.app.services.NotificationLandingActivity.class`
+

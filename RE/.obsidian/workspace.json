@@ -11,6 +11,21 @@
             "id": "a0a68e4eda98d54c",
             "type": "leaf",
             "state": {
+              "type": "canvas",
+              "state": {
+                "file": "RE/Project_1/PingoDoce/Flow/App_Flow.canvas",
+                "viewState": {
+                  "x": 85.16158385822641,
+                  "y": 327.776682147184,
+                  "zoom": 0.17276078154738922
+                }
+              }
+            }
+          },
+          {
+            "id": "6109f06f787a9334",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
                 "file": "RE/Project_1/Report.md",
@@ -18,18 +33,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "25a75062f9e200b1",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "RE/Project_1/CTT/Dynamic Analysis/Images/Pasted image 20230314161630.png"
-              }
-            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -79,7 +85,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 359.5,
+    "width": 455.5,
     "collapsed": true
   },
   "right": {
@@ -157,10 +163,31 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a0a68e4eda98d54c",
+  "active": "6109f06f787a9334",
   "lastOpenFiles": [
-    "RE/Project_1/CTT/Dynamic Analysis/Images/Pasted image 20230314161630.png",
+    "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/01.1 - Launcher_StartActivity_E-GOI_PUSH.md",
     "RE/Project_1/Report.md",
+    "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/Launcher - SplashActivity.md",
+    "RE/Project_1/PingoDoce/Flow/Pages/Main Page.md",
+    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230326153204.png",
+    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230323175210.png",
+    "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/API Error.md",
+    "RE/Project_1/PingoDoce/Flow/Pages/Welcome Page.md",
+    "RE/Project_1/PingoDoce/Flow/Pages/Intro Page.md",
+    "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/Manifest Analysis.md",
+    "RE/Project_1/PingoDoce/Flow/App_Flow.canvas",
+    "RE/Project_1/PingoDoce/Flow/Checks/VM Check.md",
+    "RE/Project_1/PingoDoce/Flow/Bypasses/VM Check Bypass.md",
+    "RE/Project_1/PingoDoce/Flow/Bypasses/Root Check Bypass.md",
+    "RE/Project_1/PingoDoce/Flow/Bypasses/script.md",
+    "RE/Project_1/PingoDoce/Flow/Checks/Root Check.md",
+    "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/02 - Exported OnboardingEmailSentActivity.md",
+    "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/03 - Exported RecoverPinActivity.md",
+    "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/SearchActivity(1).md",
+    "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/SearchActivity(2).md",
+    "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/Untitled.canvas",
+    "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/Walkthrough Activity.md",
+    "RE/Project_1/CTT/Dynamic Analysis/Images/Pasted image 20230314161630.png",
     "RE/Project_1/CTT/Dynamic Analysis/Dynamic Analysis.md",
     "RE/Project_1/CTT/Static Analysis/01_Manifest Analysis.md",
     "RE/Project_1/CTT/Static Analysis/011_Launcher.md",
@@ -169,36 +196,15 @@
     "RE/Project_1/CTT/Static Analysis/0122_CampaignTrackingReceiver.md",
     "RE/Project_1/CTT/Static Analysis/Images/Pasted image 20230302151217.png",
     "RE/Project_1/CTT/Static Analysis/0121_BroadcastRecTokenExp.md",
-    "RE/Project_1/PingoDoce/Flow/App_Flow.canvas",
-    "RE/Project_1/CTT/Index.md",
-    "RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/Manifest Analysis.md",
-    "RE/Project_1/PingoDoce/Flow/Pages/Intro Page.md",
-    "RE/Project_1/PingoDoce/Flow/Checks/VM Check.md",
-    "RE/Project_1/PingoDoce/Flow/Checks/SSL Pinning.md",
-    "RE/Project_1/PingoDoce/Flow/Checks/Root Check.md",
-    "RE/Project_1/PingoDoce/Flow/Bypasses/VM Check Bypass.md",
-    "RE/Project_1/PingoDoce/Flow/Bypasses/SSL Pinning Bypass.md",
-    "RE/Project_1/PingoDoce/Flow/Bypasses/script.md",
-    "RE/Project_1/PingoDoce/Flow/Bypasses/Root Check Bypass.md",
-    "RE/Project_1/PingoDoce/Flow/Bypasses/All Bypasses.md",
-    "RE/Project_1/PingoDoce/Flow/Bypasses/Script.md",
     "RE/Project_1/PingoDoce/Flow/Bypasses/bypass.js",
     "RE/Project_1/PingoDoce/Flow/Bypasses/Untitled",
-    "RE/Project_1/PingoDoce/Flow/API/connect/token.md",
-    "RE/Project_1/PingoDoce/Flow/API/connect/revocation.md",
-    "RE/Project_1/PingoDoce/Flow/API/catalog/search/products.md",
-    "RE/Project_1/PingoDoce/Flow/email confirmation.md",
     "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324161950.png",
-    "RE/Project_1/PingoDoce/Flow/API/user/transactionsHistory/transactionsHistory.md",
     "RE/Project_1/PingoDoce/Flow/API/user/transactionsHistory",
     "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324154326.png",
     "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324153440.png",
     "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324153238.png",
     "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324153138.png",
     "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324145028.png",
-    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324144848.png",
-    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324144230.png",
-    "RE/Project_1/PingoDoce/Flow/Images/Pasted image 20230324143827.png",
     "RE/Project_1/PingoDoce/Flow/API/identity/pinrecoverywebandsms",
     "RE/Project_1/PingoDoce/Flow/API/takeaway/orders",
     "RE/Project_1/PingoDoce/Flow/API/takeaway/categories",
