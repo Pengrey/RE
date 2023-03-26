@@ -38,10 +38,6 @@ setTimeout(function() {
             console.log('[-] TrustManager (Android < 7) pinner not found');
             //console.log(err);
         }
-
-
-
-
         // OkHTTPv3 (quadruple bypass) //
         /////////////////////////////////
         try {
