@@ -32,4 +32,3 @@ private final void handlePromoIntent() {
     }
 ```
 
-So this code fetches the data in the intent in order to do some function related to a search query, 

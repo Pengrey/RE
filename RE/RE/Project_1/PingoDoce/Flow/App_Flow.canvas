@@ -70,14 +70,17 @@
 		{"type":"file","file":"RE/Project_1/PingoDoce/Flow/Checks/VM Check.md","id":"5caa2aa0d662f5f7","x":538,"y":1021,"width":400,"height":666},
 		{"type":"file","file":"RE/Project_1/PingoDoce/Flow/Bypasses/SSL Pinning Bypass.md","id":"93109bb2bfe18a45","x":913,"y":4692,"width":835,"height":600},
 		{"type":"file","file":"RE/Project_1/PingoDoce/Flow/Bypasses/All Bypasses.md","id":"e7a2061c8cb22ace","x":-1616,"y":2363,"width":760,"height":727},
-		{"type":"file","file":"RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/01.1 - Launcher_StartActivity_E-GOI_PUSH.md","id":"5b284d82589977c6","x":3920,"y":1520,"width":400,"height":400},
+		{"type":"file","file":"RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/Launcher - StartActivity_E-GOI_PUSH.md","id":"5b284d82589977c6","x":3920,"y":1520,"width":400,"height":400},
 		{"type":"file","file":"RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/Manifest Analysis.md","id":"4eb04e133da8b14b","x":2950,"y":880,"width":400,"height":400},
 		{"type":"file","file":"RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/Launcher - SplashActivity.md","id":"d97bcd835fa11622","x":2855,"y":2040,"width":590,"height":654},
 		{"type":"text","text":"if first time opening","id":"36ea75b1a787956e","x":-480,"y":3459,"width":250,"height":50},
 		{"type":"file","file":"RE/Project_1/PingoDoce/PingoDoce_Docs/Images/promo_dialog.png","id":"dea45c86697f2e81","x":-790,"y":3180,"width":234,"height":400},
 		{"type":"file","file":"RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/SearchActivity(1).md","id":"693b067ca24a427a","x":1320,"y":10260,"width":400,"height":400},
 		{"type":"file","file":"RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/SearchActivity(2).md","id":"e844cc27d7266f92","x":2000,"y":10260,"width":400,"height":400},
-		{"type":"file","file":"RE/Project_1/PingoDoce/PingoDoce_Docs/Images/Pasted image 20230326134742.png","id":"1cbdaf15544a0084","x":1320,"y":9720,"width":80,"height":80}
+		{"type":"file","file":"RE/Project_1/PingoDoce/PingoDoce_Docs/Images/Pasted image 20230326134742.png","id":"1cbdaf15544a0084","x":1320,"y":9720,"width":80,"height":80},
+		{"id":"9c575fe034fe7360","x":4108,"y":976,"width":400,"height":400,"type":"file","file":"RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/02 - Exported OnboardingEmailSentActivity.md"},
+		{"id":"ef66266d796a6682","x":3942,"y":450,"width":400,"height":400,"type":"file","file":"RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/03 - Exported RecoverPinActivity.md"},
+		{"id":"da90590fa30984fa","x":480,"y":2334,"width":400,"height":400,"type":"file","file":"RE/Project_1/PingoDoce/PingoDoce_Docs/Static Analysis/API Error.md"}
 	],
 	"edges":[
 		{"id":"54f13dc79e40886e","fromNode":"7cc22e63c9aedd4e","fromSide":"right","toNode":"2a6b1a2a1e48b121","toSide":"top"},
@@ -204,6 +207,9 @@
 		{"id":"202da9e43675e04f","fromNode":"cb2fbc6e8d5c7bb0","fromSide":"right","toNode":"1cbdaf15544a0084","toSide":"left"},
 		{"id":"2b8c27164e6a35e6","fromNode":"9902bc58fe38c577","fromSide":"right","toNode":"1cbdaf15544a0084","toSide":"top"},
 		{"id":"8b558983024bb292","fromNode":"1cbdaf15544a0084","fromSide":"right","toNode":"e844cc27d7266f92","toSide":"top"},
-		{"id":"01054722d000d3ee","fromNode":"1cbdaf15544a0084","fromSide":"bottom","toNode":"693b067ca24a427a","toSide":"top"}
+		{"id":"01054722d000d3ee","fromNode":"1cbdaf15544a0084","fromSide":"bottom","toNode":"693b067ca24a427a","toSide":"top"},
+		{"id":"b68cd7b318d8f756","fromNode":"4eb04e133da8b14b","fromSide":"right","toNode":"9c575fe034fe7360","toSide":"left"},
+		{"id":"a534e0c4dbbf9581","fromNode":"4eb04e133da8b14b","fromSide":"right","toNode":"ef66266d796a6682","toSide":"left"},
+		{"id":"5387e2d9f115863c","fromNode":"4eb8f731a3deb472","fromSide":"right","toNode":"da90590fa30984fa","toSide":"bottom"}
 	]
 }

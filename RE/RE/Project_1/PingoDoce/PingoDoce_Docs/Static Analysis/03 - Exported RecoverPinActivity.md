@@ -26,3 +26,36 @@ public final AbstractSavedStateViewModelFactory acceptRGPDTermsNConditionsDialog
 	    intent != null ? intent.getExtras() : null);  
 }
 ```
+
+Unfortunately the function `m18579b` (`b()` below) couldn't be reversed.
+
+```java
+public final androidx.lifecycle.a b(androidx.savedstate.c activity, Bundle intent) {  
+        Intrinsics.isThisObjectNull(activity, "owner");  
+        return new a(activity, intent, this);  
+    }
+    
+public static final class a extends androidx.lifecycle.a {  
+
+    final /* synthetic */ d f14321d;  
+   
+    a(androidx.savedstate.c cVar, Bundle bundle, d dVar) {  
+        super(cVar, bundle);  
+        this.f14321d = dVar;  
+    }  
+  
+    @Override // androidx.lifecycle.a  
+    protected <T extends o0> T d(String str, Class<T> cls, l0 l0Var) {  
+        Intrinsics.isThisObjectNull(str, "key");  
+        Intrinsics.isThisObjectNull(cls, "modelClass");  
+        Intrinsics.isThisObjectNull(l0Var, "handle");  
+        b bVar = (b) this.f14321d.f14320a.get(cls);  
+        T t10 = bVar != null ? (T) bVar.a(l0Var) : null;  
+        if (t10 != null) {  
+            return t10;  
+        }  
+        throw new IllegalStateException("Unknown ViewModel class");  
+	}  
+}
+    
+``` 

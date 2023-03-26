@@ -67,5 +67,5 @@ public void onCreate(Bundle bundle) {
 }  
 ```
 
-[[01.1 - Launcher_StartActivity_E-GOI_PUSH]]
+[[Launcher - StartActivity_E-GOI_PUSH]]
 

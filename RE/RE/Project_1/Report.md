@@ -1,7 +1,7 @@
 # Introduction
-The purpose of this report is to present the findings of a project that involved the reverse engineering of two mobile applications: the CTT app and the Pingodoce app. The project was conducted with the aim of analyzing the functionality, security, and overall design of these two popular applications.
+This report aims to present the findings of the reverse engineering of two mobile Android applications: the CTT app and the O Meu Pingodoce app. The project has the goal of analyzing the functionality, security, and overall design of these two popular applications.
 
-The reverse engineering process involved both static and dynamic analysis techniques. Static analysis was used to examine the application's source code, binaries, and resources, while dynamic analysis involved the use of various tools to observe the behavior of the applications in real-time.
+The reverse engineering process involved both static and dynamic analysis techniques. Static analysis was used to examine the application's decompiled code, binaries, and resources, while dynamic analysis involved the use of various tools to observe the behavior of the applications in real-time.
 
 Through this analysis, we aimed to identify any potential security vulnerabilities, performance issues, or design flaws in the applications. Additionally, we sought to gain a better understanding of the functionality of each application and how they interact with the users.
 
@@ -11,9 +11,11 @@ In the following sections, we will provide a detailed analysis of each applicati
 
 # CTT
 ## Static Analysis
-### Manifest
+### Android Manifest
 #### Activities
-The first step in our static analysis of the CTT app involved examining its manifest file. The manifest provides important information about the application, such as its package name, version number, and the permissions it requires to run.
+The first step in our static analysis of the CTT app involved examining its manifest file. The manifest provides important information about the application, such as its package name, version number, and the permissions it requires to run. 
+This file is always present in the .apk (in some way or another), since it is needed by the android system for the application to work, which makes it a valuable entrypoint to gain understanding of the application. Particularly so due to Android's inner workings, as the app's interactions with the rest of the system (Access to hardware, event listeners...) must be detailed in the file. 
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="95" android:versionName="1.0.960" android:hardwareAccelerated="true" android:compileSdkVersion="33" android:compileSdkVersionCodename="13" package="pt.ctt.outsystems.CTT" platformBuildVersionCode="33" platformBuildVersionName="13">
@@ -188,7 +190,9 @@ The first step in our static analysis of the CTT app involved examining its mani
 </manifest>
 ```
 
-During our analysis, we identified a launcher activity defined in the manifest file. The launcher activity in the CTT app is `ctt.mobile.android.app.ctt.MainActivity`. This activity is declared in the Android manifest file and has an intent filter with the `android.intent.action.MAIN` action and `android.intent.category.LAUNCHER` category, which makes it the entry point for the application. The `android:exported` attribute is set to `true`, which means that it can be launched by other applications or components.
+During our analysis, we identified a launcher activity defined in the manifest file. The launcher activity in the CTT app is `ctt.mobile.android.app.ctt.MainActivity`. 
+This activity is declared in the Android manifest file and has an intent filter with the `android.intent.action.MAIN` action and `android.intent.category.LAUNCHER` category, which makes it the entry point for the application when opened by its' Launcher (Its icon on the home screen is clicked on by the user).
+The `android:exported` attribute is set to `true`, which means that it can be launched by other applications or components.
 ```xml
 <activity
     android:name="ctt.mobile.android.app.ctt.MainActivity"
