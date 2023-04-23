@@ -8,12 +8,14 @@
         "type": "tabs",
         "children": [
           {
-            "id": "8bd50ef68ae4cb08",
+            "id": "cff0bf89ad38fc73",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Pasted image 20230326224745.png"
+                "file": "RE/Project_2/Binary.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pasted image 20230326224745.png",
+                "file": "RE/Project_2/Binary.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Pasted image 20230326224745.png",
+                "file": "RE/Project_2/Binary.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Pasted image 20230326224745.png"
+                "file": "RE/Project_2/Binary.md"
               }
             }
           }
@@ -144,9 +146,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8bd50ef68ae4cb08",
+  "active": "cff0bf89ad38fc73",
   "lastOpenFiles": [
-    "Pasted image 20230326224811.png",
-    "Pasted image 20230326224745.png"
+    "RE/Project_2/src/Untitled.md",
+    "RE/Project_2/Binary.md",
+    "RE/Project_2/src",
+    "RE/Project_1/PingoDoce/PingoDoce_Docs/Images/Pasted image 20230326224745.png",
+    "RE/Project_2",
+    "RE/Project_1/PingoDoce/PingoDoce_Docs/Images/Pasted image 20230326224811.png"
   ]
 }
