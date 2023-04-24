@@ -106,8 +106,9 @@ $
 
 ## Extract python code
 ```bash
+$ objcopy --dump-section pydata=pydata.dump yt-dlp
 $ ls
-Dokuments  pydata.dump  yt-dlp
+pydata.dump  yt-dlp
 $ python ./pyinstxtractor/pyinstxtractor.py pydata.dump 
 [+] Processing pydata.dump
 [+] Pyinstaller version: 2.1+
