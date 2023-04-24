@@ -7,6 +7,8 @@ $
 ```
 
 ## objectdump command
+
+(symbol and dynamic symbol table)
 ```bash
 $ objdump -tT yt-dlp 
 
