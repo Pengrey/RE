@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:theme="@style/App.TakeAway.Badge" android:tag="layout/view_for_takeaway_orders_count_0" android:layout_width="60dp" android:layout_height="60dp">
-    <FrameLayout android:id="@+id/const_bg" android:background="@drawable/shape_for_rounded_left_bg" android:layout_width="51dp" android:layout_height="51dp" android:foreground="?attr/selectableItemBackgroundBorderless" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0">
-        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_order" app:tint="?attr/colorOnPrimary"/>
-    </FrameLayout>
-    <View android:id="@+id/const_badge_background" android:background="@drawable/shape_for_takeaway_badge" android:layout_width="20dp" android:layout_height="20dp" app:layout_constraintCircle="@+id/const_bg" app:layout_constraintCircleAngle="312" app:layout_constraintCircleRadius="26dp"/>
-    <TextView android:theme="@style/App.BottomNavigation.CustomBadge" android:textSize="11sp" android:textColor="?attr/colorOnPrimary" android:gravity="center" android:id="@+id/badge_TextView" android:tag="binding_1" android:layout_width="20dp" android:layout_height="20dp" app:layout_constraintCircle="@+id/const_badge_background"/>
-</androidx.constraintlayout.widget.ConstraintLayout>

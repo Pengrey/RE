@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/activity_store_0" android:layout_width="match_parent" android:layout_height="match_parent">
-    <com.google.android.material.appbar.AppBarLayout android:id="@+id/header_AppBarLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:elevation="1dp">
-        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/App.ToolbarStyle"/>
-        <com.google.android.material.tabs.TabLayout android:theme="@style/App.TabLayout.Store" android:id="@+id/store_TabLayout" android:layout_width="match_parent" android:layout_height="match_parent" app:tabGravity="0" app:tabMode="1" style="@style/App.TabStyle"/>
-    </com.google.android.material.appbar.AppBarLayout>
-    <androidx.viewpager2.widget.ViewPager2 android:id="@+id/store_ViewPager2" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>

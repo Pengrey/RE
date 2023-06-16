@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/view_for_baby_club_list_0" android:layout_width="match_parent" android:layout_height="match_parent">
-    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
-        <com.github.guilhe.views.PlaceHolderRecyclerView android:theme="@style/App.RecyclerView" android:id="@+id/purchase_PlaceHolderRecyclerView" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:text="@string/lbl_clubs_baby_have_more_babies" style="@style/App.WidgetStyle.Title"/>
-        <com.google.android.material.button.MaterialButton android:theme="@style/App.Button" android:id="@+id/submit_MaterialButton" android:tag="binding_1" android:layout_width="match_parent" android:layout_marginTop="16dp" android:text="@string/btn_add_another_baby" style="@style/App.WidgetStyle.Button"/>
-    </LinearLayout>
-    <include layout="@layout/view_loading"/>
-</FrameLayout>

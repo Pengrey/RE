@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:tag="layout/view_row_for_shared_with_0" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="@dimen/shopping_shared_with_row_height" android:layout_marginEnd="0dp"/>
-    <TextView android:textSize="10sp" android:textColor="?android:attr/textColorTertiary" android:tag="binding_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="20dp" android:textAlignment="center" style="@style/App.WidgetStyle.SubTitle"/>
-</LinearLayout>

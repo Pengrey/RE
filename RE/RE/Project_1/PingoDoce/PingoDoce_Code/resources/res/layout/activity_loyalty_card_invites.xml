@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/activity_loyalty_card_invites_0" android:layout_width="match_parent" android:layout_height="match_parent">
-    <include layout="@layout/view_toolbar"/>
-    <com.github.guilhe.views.PlaceHolderRecyclerView android:theme="@style/App.RecyclerView" android:id="@+id/invites_PlaceHolderRecyclerView" android:paddingTop="@dimen/spacing_default" android:paddingBottom="@dimen/spacing_default" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
-    <include android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/view_for_no_connection"/>
-    <include android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/view_for_empty"/>
-    <include layout="@layout/view_loading"/>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>

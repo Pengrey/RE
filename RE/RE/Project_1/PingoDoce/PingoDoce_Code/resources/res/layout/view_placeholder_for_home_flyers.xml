@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:tag="layout/view_placeholder_for_home_flyers_0" android:background="?attr/colorPrimary" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/App.PlaceHolder">
-    <com.facebook.shimmer.ShimmerFrameLayout android:tag="binding_1" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/App.WidgetStyle.PlaceHolder">
-        <com.google.android.material.card.MaterialCardView android:layout_gravity="center_horizontal" android:layout_width="160dp" android:layout_height="14dp" android:layout_marginTop="15dp" style="@style/App.WidgetStyle.CardView.PlaceHolder"/>
-        <com.google.android.material.card.MaterialCardView android:layout_gravity="center_horizontal" android:layout_width="100dp" android:layout_height="8dp" android:layout_marginTop="35dp" style="@style/App.WidgetStyle.CardView.PlaceHolder"/>
-    </com.facebook.shimmer.ShimmerFrameLayout>
-    <include android:layout_gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="80dp" layout="@layout/view_placeholder_generic_for_viewpager"/>
-</FrameLayout>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/view_for_empty_0" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <ImageView android:tag="binding_1" android:layout_width="match_parent" android:layout_height="@dimen/empty_list_icon_width" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
-    <TextView android:gravity="center" android:id="@+id/const_empty_title" android:tag="binding_2" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/const_empty_image" style="@style/App.WidgetStyle.Title"/>
-    <TextView android:gravity="center" android:tag="binding_3" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/const_empty_title" style="@style/App.WidgetStyle.SubTitle"/>
-</LinearLayout>

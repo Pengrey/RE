@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:theme="@style/App.CardView.TakeAwayCategory" android:id="@+id/category_MaterialCardView" android:tag="layout/view_row_for_take_away_category_0" android:layout_width="match_parent" android:layout_height="95dp" app:cardBackgroundColor="?attr/colorSurface" style="@style/Widget.MaterialComponents.CardView">
-    <ImageView android:tag="binding_1" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
-    <View android:background="?attr/overlayColor" android:layout_width="match_parent" android:layout_height="match_parent"/>
-    <TextView android:textColor="?android:attr/textColorPrimary" android:layout_gravity="center" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintEnd_toStartOf="@+id/guideline" app:layout_constraintStart_toEndOf="@+id/meal_image" app:layout_constraintTop_toTopOf="@+id/meal_image" style="@style/App.WidgetStyle.Title"/>
-</com.google.android.material.card.MaterialCardView>

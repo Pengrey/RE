@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/activity_electronic_invoice_status_0" android:layout_width="match_parent" android:layout_height="match_parent">
-    <include android:id="@+id/const_toolbar" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" layout="@layout/view_toolbar"/>
-    <androidx.recyclerview.widget.RecyclerView android:id="@+id/resume_RecyclerView" android:paddingTop="50dp" android:paddingBottom="@dimen/bottom_padding_for_lists_below_button" android:clipToPadding="false" android:layout_width="0dp" android:layout_height="0dp" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" app:layout_behavior="@string/appbar_scrolling_view_behavior" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/const_toolbar"/>
-    <com.google.android.material.button.MaterialButton android:theme="@style/App.Button.Secondary.Variant" android:id="@+id/const_btn" android:tag="binding_1" android:text="@string/btn_electronic_invoce_remove" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" style="@style/App.WidgetStyle.Button"/>
-    <include layout="@layout/view_loading"/>
-</androidx.constraintlayout.widget.ConstraintLayout>

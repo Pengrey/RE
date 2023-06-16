@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/fragment_take_away_product_list_0" android:layout_width="match_parent" android:layout_height="match_parent">
-    <com.github.guilhe.views.PlaceHolderRecyclerView android:theme="@style/App.RecyclerView" android:id="@+id/meals_RecyclerView" android:tag="binding_1" android:paddingBottom="@dimen/bottom_padding_for_lists_below_button" android:clipToPadding="false" android:layout_width="0dp" android:layout_height="0dp" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
-    <include layout="@layout/view_for_products_not_found"/>
-    <include android:layout_width="0dp" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" layout="@layout/view_for_no_connection"/>
-    <include android:layout_width="@dimen/small_loading_width" android:layout_height="@dimen/small_loading_height" android:layout_marginBottom="20dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" layout="@layout/view_loading_small"/>
-</androidx.constraintlayout.widget.ConstraintLayout>

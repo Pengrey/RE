@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:icon="@drawable/btn_nav_home" android:id="@+id/navigation_home" android:title=""/>
-    <item android:icon="@drawable/btn_nav_promo" android:id="@+id/navigation_promo" android:title=""/>
-    <item android:icon="@drawable/ic_navbar_shopping_list" android:id="@+id/navigation_shoplist" android:title=""/>
-    <item android:icon="@drawable/btn_nav_takeaway" android:id="@+id/navigation_takeaway" android:title=""/>
-</menu>

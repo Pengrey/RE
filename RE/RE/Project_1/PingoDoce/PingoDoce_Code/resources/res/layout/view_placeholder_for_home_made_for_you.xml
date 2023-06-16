@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:theme="@style/App.PlaceHolder" android:orientation="vertical" android:tag="layout/view_placeholder_for_home_made_for_you_0" android:background="?attr/colorPrimary" android:paddingBottom="40dp" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <com.facebook.shimmer.ShimmerFrameLayout android:tag="binding_1" android:paddingBottom="@dimen/spacing_default" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/App.WidgetStyle.PlaceHolder">
-        <com.google.android.material.card.MaterialCardView android:theme="@style/App.PlaceHolder" android:layout_gravity="start" android:layout_width="200dp" android:layout_height="24dp" android:layout_marginTop="21dp" android:layout_marginStart="@dimen/spacing_default" style="@style/App.WidgetStyle.CardView.PlaceHolder"/>
-    </com.facebook.shimmer.ShimmerFrameLayout>
-    <include android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="40dp" android:layout_marginStart="@dimen/spacing_default" android:layout_marginEnd="@dimen/spacing_default" layout="@layout/view_placeholder_generic_for_list_small_item"/>
-</LinearLayout>

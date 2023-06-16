@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:tag="layout/view_placeholder_for_shopping_list_0" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/App.WidgetStyle.PlaceHolder">
-    <com.google.android.material.card.MaterialCardView android:theme="@style/App.PlaceHolder" android:layout_width="match_parent" android:layout_height="200dp" style="@style/App.WidgetStyle.CardView.PlaceHolder"/>
-</com.facebook.shimmer.ShimmerFrameLayout>

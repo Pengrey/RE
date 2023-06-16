@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/no_product_ConstraintLayout" android:tag="layout/view_search_no_product_0" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <ImageView android:id="@+id/const_no_product" android:background="@drawable/ic_empty_results" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
-    <TextView android:gravity="center_horizontal" android:tag="binding_1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_default" android:layout_marginStart="27dp" android:layout_marginEnd="27dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/const_no_product" style="@style/App.WidgetStyle.SubTitle"/>
-</androidx.constraintlayout.widget.ConstraintLayout>

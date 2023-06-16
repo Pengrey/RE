@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:tag="layout/view_row_for_friend_image_0" android:layout_width="wrap_content" android:layout_height="wrap_content">
-    <ImageView android:id="@+id/imageView" android:tag="binding_1" android:layout_width="30dp" android:layout_height="30dp" android:layout_margin="1dp" android:scaleType="centerCrop"/>
-    <ImageView android:theme="@style/App.ShoppingList.Friend" android:tag="binding_2" android:background="@drawable/shape_for_ring" android:layout_width="30dp" android:layout_height="30dp" android:layout_margin="1dp"/>
-</FrameLayout>
